@@ -18,7 +18,7 @@ Tundra addresses, amongst other the following categories within MVVM:
   * View Model Locators
   * Wrapper and Providers
 
-The web site relies on the following frameworks: 
+Tundra relies on the following frameworks: 
 
 + [Lex.Db](http://lexblog.azurewebsites.net/intro-to-lex-db/): Lex.DB is a lightweight, superfast, in-process database engine
 + [Microsoft.Bcl](https://www.nuget.org/packages/Microsoft.Bcl/): Microsoft BCL Portability Pack
