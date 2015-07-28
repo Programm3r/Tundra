@@ -1,5 +1,5 @@
 # Welcome to Tundra
-A small portable class library which aids in the implementation of the MVVM architectural pattern. This library can be used in any XAML based application. Please take into consideration that Tundra is not intended to replace MVVM Light, merely to extend the functionality based on previous implementation that I did. Please refer to the Wiki for more information: https://github.com/Programm3r/Tundra/wiki
+A small portable class library which aids in the implementation of the MVVM architectural pattern. This library can be used in any XAML based application. Please take into consideration that Tundra is not intended to replace MVVM Light, merely to extend the functionality based on previous implementation that I did. Please refer to the Wiki for more information: [Wiki](https://github.com/Programm3r/Tundra/wiki) 
 
 ## Introduction
 Tundra is a small portable class library written in C# .NET, which aids in the implementation of MVVM. It extends the implementation done by MVVM Light. As mentioned previously, this assembly can be used and implemented in any XAML based application. The source code submitted will consist of the following XAML based applications:
