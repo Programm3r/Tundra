@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>RICHARD-WIN8</Machine>
+    <WindowsUser>Richard</WindowsUser>
+    <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <PackageIdentityName>5309559f-2d2f-4486-b756-616c071d86be</PackageIdentityName>
+    <IntermediateOutputPath>C:\Users\Richard\Source\Repos\Tundra\Tundra\Tundra.WindowsApp\obj\Debug\</IntermediateOutputPath>
+    <RegisteredManifestChecksum>5ADDBF3E9B1371CFF795488885C713E1CA52C046ECFF92617EB2A1CDD069453C</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>5309559f-2d2f-4486-b756-616c071d86be_1.0.0.0_neutral__bqbb28m2ksa1g</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>5309559f-2d2f-4486-b756-616c071d86be_bqbb28m2ksa1g!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>5309559f-2d2f-4486-b756-616c071d86be</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=Richard</RegisteredPackagePublisher>
+    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+    <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Users\Richard\Source\Repos\Tundra\Tundra\Tundra.WindowsApp\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-07-28T15:28:25.423</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Users\Richard\Source\Repos\Tundra\Tundra\Tundra.WindowsApp\bin\Debug\Tundra.WindowsApp.exe">
+      <PackagePath>Tundra.WindowsApp.exe</PackagePath>
+      <Modified>2015-07-28T15:30:05.220</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Richard\Source\Repos\Tundra\Tundra\packages\MvvmLightLibs.5.1.1.0\lib\windows81\GalaSoft.MvvmLight.dll">
+      <PackagePath>GalaSoft.MvvmLight.dll</PackagePath>
+      <Modified>2015-06-15T09:22:56.451</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Richard\Source\Repos\Tundra\Tundra\packages\MvvmLightLibs.5.1.1.0\lib\windows81\GalaSoft.MvvmLight.Extras.dll">
+      <PackagePath>GalaSoft.MvvmLight.Extras.dll</PackagePath>
+      <Modified>2015-06-15T09:22:56.476</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Richard\Source\Repos\Tundra\Tundra\packages\MvvmLightLibs.5.1.1.0\lib\windows81\GalaSoft.MvvmLight.Platform.dll">
+      <PackagePath>GalaSoft.MvvmLight.Platform.dll</PackagePath>
+      <Modified>2015-06-15T09:22:56.521</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Richard\Source\Repos\Tundra\Tundra\packages\Lex.Db.1.2.3.0\lib\netcore451\Lex.Db.dll">
+      <PackagePath>Lex.Db.dll</PackagePath>
+      <Modified>2015-06-15T09:42:25.530</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Richard\Source\Repos\Tundra\Tundra\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll">
+      <PackagePath>Microsoft.Practices.ServiceLocation.dll</PackagePath>
+      <Modified>2015-06-15T09:22:55.285</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Richard\Source\Repos\Tundra\Tundra\packages\Microsoft.Bcl.Async.1.0.168\lib\win8\Microsoft.Threading.Tasks.dll">
+      <PackagePath>Microsoft.Threading.Tasks.dll</PackagePath>
+      <Modified>2015-06-15T11:33:34.433</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Richard\Source\Repos\Tundra\Tundra\packages\Microsoft.Bcl.Async.1.0.168\lib\win8\Microsoft.Threading.Tasks.Extensions.dll">
+      <PackagePath>Microsoft.Threading.Tasks.Extensions.dll</PackagePath>
+      <Modified>2015-06-15T11:33:34.453</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Richard\Source\Repos\Tundra\Tundra\packages\Newtonsoft.Json.7.0.1\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll">
+      <PackagePath>Newtonsoft.Json.dll</PackagePath>
+      <Modified>2015-07-23T12:18:48.399</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Richard\Source\Repos\Tundra\Tundra\packages\Portable.Ninject.3.3.1\lib\win8\Ninject.dll">
+      <PackagePath>Ninject.dll</PackagePath>
+      <Modified>2015-06-15T09:43:27.538</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Richard\Source\Repos\Tundra\Tundra\packages\Microsoft.Net.Http.2.2.29\lib\win8\System.Net.Http.Extensions.dll">
+      <PackagePath>System.Net.Http.Extensions.dll</PackagePath>
+      <Modified>2015-06-15T11:34:41.540</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Richard\Source\Repos\Tundra\Tundra\packages\Microsoft.Net.Http.2.2.29\lib\win8\System.Net.Http.Primitives.dll">
+      <PackagePath>System.Net.Http.Primitives.dll</PackagePath>
+      <Modified>2015-06-15T11:34:41.562</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Richard\Source\Repos\Tundra\Tundra\Tundra\bin\Debug\Tundra.dll">
+      <PackagePath>Tundra.dll</PackagePath>
+      <Modified>2015-07-28T15:29:36.462</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Richard\Source\Repos\Tundra\Tundra\Tundra.Implementation\bin\Debug\Tundra.Implementation.dll">
+      <PackagePath>Tundra.Implementation.dll</PackagePath>
+      <Modified>2015-07-28T15:29:37.197</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Richard\Source\Repos\Tundra\Tundra\Tundra.WindowsApp\Assets\Logo.scale-100.png">
+      <PackagePath>Assets\Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2013-07-23T04:01:02.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Richard\Source\Repos\Tundra\Tundra\Tundra.WindowsApp\Assets\SmallLogo.scale-100.png">
+      <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2013-07-23T04:01:02.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Richard\Source\Repos\Tundra\Tundra\Tundra.WindowsApp\Assets\SplashScreen.scale-100.png">
+      <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2013-07-23T04:01:02.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Richard\Source\Repos\Tundra\Tundra\Tundra.WindowsApp\Assets\StoreLogo.scale-100.png">
+      <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2013-07-23T04:01:02.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Richard\Source\Repos\Tundra\Tundra\Tundra.WindowsApp\bin\Debug\App.xbf">
+      <PackagePath>App.xbf</PackagePath>
+      <Modified>2015-07-28T15:28:24.314</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Richard\Source\Repos\Tundra\Tundra\Tundra.WindowsApp\bin\Debug\View\MainView.xbf">
+      <PackagePath>View\MainView.xbf</PackagePath>
+      <Modified>2015-07-28T15:28:24.314</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Richard\Source\Repos\Tundra\Tundra\Tundra.WindowsApp\bin\Debug\View\RegistrationView.xbf">
+      <PackagePath>View\RegistrationView.xbf</PackagePath>
+      <Modified>2015-07-28T15:28:24.314</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Richard\Source\Repos\Tundra\Tundra\Tundra.WindowsApp\bin\Debug\Tundra.WindowsApp.xr.xml">
+      <PackagePath>Tundra.WindowsApp.xr.xml</PackagePath>
+      <Modified>2015-07-28T13:10:13.618</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Richard\Source\Repos\Tundra\Tundra\Tundra.WindowsApp\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <Modified>2015-07-28T15:28:25.220</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

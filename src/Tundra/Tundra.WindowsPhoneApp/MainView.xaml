@@ -1,0 +1,30 @@
+﻿<Page
+    x:Class="Tundra.WindowsPhoneApp.MainView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Tundra.WindowsPhoneApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    DataContext="{Binding MainViewModel, Source={StaticResource Bootstrapper}}">
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid HorizontalAlignment="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="1*" />
+            </Grid.RowDefinitions>
+            <TextBlock FontSize="30" Grid.Row="1" Foreground="Magenta"
+                       Text="{Binding PersonModel.FullName, Mode=TwoWay}" />
+            <TextBlock FontSize="30" Grid.Row="2" Foreground="Lime" Text="{Binding PersonModel.Age, Mode=TwoWay}" />
+            <TextBlock Grid.Row="3" Text="{Binding Foo}"
+                       Foreground="Aqua" FontSize="25" />
+            <Button Grid.Row="4" Content="Registration" Foreground="Yellow"
+                    Command="{Binding PerformRegistration}" />
+        </Grid>
+    </Grid>
+</Page>

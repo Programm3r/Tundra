@@ -1,0 +1,4 @@
+C:\Users\Richard\Source\Repos\Tundra\Tundra\Tundra.Implementation\Tundra.Implementation.csproj;neutral
+C:\Users\Richard\Source\Repos\Tundra\Tundra\Tundra.WindowsApp\Tundra.WindowsApp.csproj;neutral
+C:\Users\Richard\Source\Repos\Tundra\Tundra\Tundra\Tundra.csproj;neutral
+C:\Users\Richard\Source\Repos\Tundra\Tundra\Tundra\Tundra.csproj;neutral

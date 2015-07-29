@@ -1,0 +1,11 @@
+﻿<Application
+    x:Class="Tundra.WindowsApp.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Tundra.WindowsApp"
+    xmlns:IoC="using:Tundra.Implementation.IoC"
+    xmlns:sys="using:System">
+    <Application.Resources>
+        <IoC:Bootstrapper x:Key="Bootstrapper"/>
+    </Application.Resources>
+</Application>

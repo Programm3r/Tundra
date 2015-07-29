@@ -1,0 +1,18 @@
+<XamlCompilerSaveState>
+  <ReferenceAssemblyList>
+    <LocalAssembly PathName="c:\users\richard\source\repos\tundra\tundra\tundra.windowsapp\obj\debug\intermediatexaml\tundra.windowsapp.exe" HashGuid="62da0884-6342-997a-2826-f72eb2ed3ac4" />
+    <ReferenceAssembly PathName="c:\users\richard\source\repos\tundra\tundra\packages\mvvmlightlibs.5.1.1.0\lib\windows81\galasoft.mvvmlight.dll" HashGuid="d702f8e6-9904-1220-8de7-be8614bf93e8" />
+    <ReferenceAssembly PathName="c:\users\richard\source\repos\tundra\tundra\packages\mvvmlightlibs.5.1.1.0\lib\windows81\galasoft.mvvmlight.extras.dll" HashGuid="f59e2cac-89a1-06f4-bbe7-18857251ef78" />
+    <ReferenceAssembly PathName="c:\users\richard\source\repos\tundra\tundra\packages\mvvmlightlibs.5.1.1.0\lib\windows81\galasoft.mvvmlight.platform.dll" HashGuid="27c4f135-c15f-18a2-cb9f-847748d33bdb" />
+    <ReferenceAssembly PathName="c:\users\richard\source\repos\tundra\tundra\packages\lex.db.1.2.3.0\lib\netcore451\lex.db.dll" HashGuid="dca65d2a-682c-4b19-5b75-669a27f12b8a" />
+    <ReferenceAssembly PathName="c:\users\richard\source\repos\tundra\tundra\packages\commonservicelocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\microsoft.practices.servicelocation.dll" HashGuid="89de7f80-26d8-a17c-5ad9-b855f81ea5b2" />
+    <ReferenceAssembly PathName="c:\users\richard\source\repos\tundra\tundra\packages\microsoft.bcl.async.1.0.168\lib\win8\microsoft.threading.tasks.dll" HashGuid="3a1beea5-1547-d5c6-af32-3b5c761c2a6a" />
+    <ReferenceAssembly PathName="c:\users\richard\source\repos\tundra\tundra\packages\microsoft.bcl.async.1.0.168\lib\win8\microsoft.threading.tasks.extensions.dll" HashGuid="79a01987-c06c-c9d7-37eb-629809787680" />
+    <ReferenceAssembly PathName="c:\users\richard\source\repos\tundra\tundra\packages\newtonsoft.json.7.0.1\lib\portable-net40+sl5+wp80+win8+wpa81\newtonsoft.json.dll" HashGuid="0b4cdfc1-2257-2e75-23cf-4052e97b309e" />
+    <ReferenceAssembly PathName="c:\users\richard\source\repos\tundra\tundra\packages\portable.ninject.3.3.1\lib\win8\ninject.dll" HashGuid="54fed696-f500-5d46-94e7-3b3252e51ca1" />
+    <ReferenceAssembly PathName="c:\users\richard\source\repos\tundra\tundra\packages\microsoft.net.http.2.2.29\lib\win8\system.net.http.extensions.dll" HashGuid="b50282f8-b9f8-4408-8d49-ba2efe301624" />
+    <ReferenceAssembly PathName="c:\users\richard\source\repos\tundra\tundra\packages\microsoft.net.http.2.2.29\lib\win8\system.net.http.primitives.dll" HashGuid="7b71418d-e056-7613-c839-85fb8f6472a6" />
+    <ReferenceAssembly PathName="c:\users\richard\source\repos\tundra\tundra\tundra\bin\debug\tundra.dll" HashGuid="02110d95-7206-1326-967b-fcef0499a8b9" />
+    <ReferenceAssembly PathName="c:\users\richard\source\repos\tundra\tundra\tundra.implementation\bin\debug\tundra.implementation.dll" HashGuid="28b40c42-0561-eb22-f3c3-a680502e3868" />
+  </ReferenceAssemblyList>
+</XamlCompilerSaveState>

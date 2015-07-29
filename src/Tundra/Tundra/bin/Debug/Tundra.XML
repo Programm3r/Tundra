@@ -1,0 +1,3241 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Tundra</name>
+    </assembly>
+    <members>
+        <member name="T:Tundra.Bootstrapping.BootstrapperBase">
+            <summary>
+            This is a simple implementation of our boot-strapper for Ninject.
+            </summary>
+        </member>
+        <member name="M:Tundra.Bootstrapping.BootstrapperBase.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Tundra.Bootstrapping.BootstrapperBase"/> class.
+            </summary>
+        </member>
+        <member name="M:Tundra.Bootstrapping.BootstrapperBase.ModulesOnCollectionChanged(System.Object,System.Collections.Specialized.NotifyCollectionChangedEventArgs)">
+            <summary>
+            Occurred when the module collection has changed.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="changedEventArgs">The <see cref="T:System.Collections.Specialized.NotifyCollectionChangedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Tundra.Bootstrapping.BootstrapperBase.Dispose">
+            <summary>
+            Releases unmanaged and - optionally - managed resources.
+            </summary>
+        </member>
+        <member name="M:Tundra.Bootstrapping.BootstrapperBase.Finalize">
+            <summary>
+            Finalizes an instance of the <see cref="T:Tundra.Bootstrapping.BootstrapperBase"/> class.
+            </summary>
+        </member>
+        <member name="M:Tundra.Bootstrapping.BootstrapperBase.Dispose(System.Boolean)">
+            <summary>
+            Releases unmanaged and - optionally - managed resources.
+            </summary>
+            <param name="disposing"><c>true</c> to release both managed and unmanaged resources; <c>false</c> to release only unmanaged resources.</param>
+        </member>
+        <member name="P:Tundra.Bootstrapping.BootstrapperBase.Container">
+            <summary>
+            The container (Ninject Kernel) used to bind the types to the interfaces.
+            </summary>
+            <value>
+            The container.
+            </value>
+        </member>
+        <member name="P:Tundra.Bootstrapping.BootstrapperBase.Modules">
+            <summary>
+            The ninject modules to be loaded by the container (Ninject Kernel)
+            </summary>
+            <value>
+            The modules.
+            </value>
+        </member>
+        <member name="P:Tundra.Bootstrapping.BootstrapperBase.ViewModelLocator">
+            <summary>
+            The ViewModel-Locator that holds the instantiated ViewModels to bind the XAML against.
+            </summary>
+            <value>
+            The view model locator.
+            </value>
+            <exception cref="T:System.Exception">Initialize a new instance of an IKernel (Container) before using the view model locator.</exception>
+        </member>
+        <member name="T:Tundra.Collections.ObservableDictionary`2">
+            <summary>
+            Observable Dictionary Class
+            </summary>
+            <typeparam name="TKey">The type of the key.</typeparam>
+            <typeparam name="TValue">The type of the value.</typeparam>
+        </member>
+        <member name="F:Tundra.Collections.ObservableDictionary`2.CountString">
+            <summary>
+            The count string{CC2D43FA-BBC4-448A-9D0B-7B57ADF2655C}
+            </summary>
+        </member>
+        <member name="F:Tundra.Collections.ObservableDictionary`2.IndexerName">
+            <summary>
+            The indexer name
+            </summary>
+        </member>
+        <member name="F:Tundra.Collections.ObservableDictionary`2.KeysName">
+            <summary>
+            The keys name
+            </summary>
+        </member>
+        <member name="F:Tundra.Collections.ObservableDictionary`2.ValuesName">
+            <summary>
+            The values name
+            </summary>
+        </member>
+        <member name="F:Tundra.Collections.ObservableDictionary`2._Dictionary">
+            <summary>
+            The _ dictionary
+            </summary>
+        </member>
+        <member name="M:Tundra.Collections.ObservableDictionary`2.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Tundra.Collections.ObservableDictionary`2"/> class.
+            </summary>
+        </member>
+        <member name="M:Tundra.Collections.ObservableDictionary`2.#ctor(System.Collections.Generic.IDictionary{`0,`1})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Tundra.Collections.ObservableDictionary`2"/> class.
+            </summary>
+            <param name="dictionary">The dictionary.</param>
+        </member>
+        <member name="M:Tundra.Collections.ObservableDictionary`2.#ctor(System.Collections.Generic.IEqualityComparer{`0})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Tundra.Collections.ObservableDictionary`2"/> class.
+            </summary>
+            <param name="comparer">The comparer.</param>
+        </member>
+        <member name="M:Tundra.Collections.ObservableDictionary`2.#ctor(System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Tundra.Collections.ObservableDictionary`2"/> class.
+            </summary>
+            <param name="capacity">The capacity.</param>
+        </member>
+        <member name="M:Tundra.Collections.ObservableDictionary`2.#ctor(System.Collections.Generic.IDictionary{`0,`1},System.Collections.Generic.IEqualityComparer{`0})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Tundra.Collections.ObservableDictionary`2"/> class.
+            </summary>
+            <param name="dictionary">The dictionary.</param>
+            <param name="comparer">The comparer.</param>
+        </member>
+        <member name="M:Tundra.Collections.ObservableDictionary`2.#ctor(System.Int32,System.Collections.Generic.IEqualityComparer{`0})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Tundra.Collections.ObservableDictionary`2"/> class.
+            </summary>
+            <param name="capacity">The capacity.</param>
+            <param name="comparer">The comparer.</param>
+        </member>
+        <member name="M:Tundra.Collections.ObservableDictionary`2.Add(`0,`1)">
+            <summary>
+            Adds an element with the provided key and value to the <see cref="T:System.Collections.Generic.IDictionary`2" />.
+            </summary>
+            <param name="key">The object to use as the key of the element to add.</param>
+            <param name="value">The object to use as the value of the element to add.</param>
+        </member>
+        <member name="M:Tundra.Collections.ObservableDictionary`2.ContainsKey(`0)">
+            <summary>
+            Determines whether the <see cref="T:System.Collections.Generic.IDictionary`2" /> contains an element with the specified key.
+            </summary>
+            <param name="key">The key to locate in the <see cref="T:System.Collections.Generic.IDictionary`2" />.</param>
+            <returns>
+            true if the <see cref="T:System.Collections.Generic.IDictionary`2" /> contains an element with the key; otherwise, false.
+            </returns>
+        </member>
+        <member name="M:Tundra.Collections.ObservableDictionary`2.Remove(`0)">
+            <summary>
+            Removes the element with the specified key from the <see cref="T:System.Collections.Generic.IDictionary`2"/>.
+            </summary>
+            <param name="key">The key of the element to remove.</param>
+            <returns>
+            true if the element is successfully removed; otherwise, false.  This method also returns false if <paramref name="key"/> was not found in the original <see cref="T:System.Collections.Generic.IDictionary`2"/>.
+            </returns>
+            <exception cref="T:System.ArgumentNullException">key</exception>
+        </member>
+        <member name="M:Tundra.Collections.ObservableDictionary`2.TryGetValue(`0,`1@)">
+            <summary>
+            Gets the value associated with the specified key.
+            </summary>
+            <param name="key">The key whose value to get.</param>
+            <param name="value">When this method returns, the value associated with the specified key, if the key is found; otherwise, the default value for the type of the <paramref name="value" /> parameter. This parameter is passed uninitialized.</param>
+            <returns>
+            true if the object that implements <see cref="T:System.Collections.Generic.IDictionary`2" /> contains an element with the specified key; otherwise, false.
+            </returns>
+        </member>
+        <member name="M:Tundra.Collections.ObservableDictionary`2.Add(System.Collections.Generic.KeyValuePair{`0,`1})">
+            <summary>
+            Adds an item to the <see cref="T:System.Collections.Generic.ICollection`1" />.
+            </summary>
+            <param name="item">The object to add to the <see cref="T:System.Collections.Generic.ICollection`1" />.</param>
+        </member>
+        <member name="M:Tundra.Collections.ObservableDictionary`2.Clear">
+            <summary>
+            Removes all items from the <see cref="T:System.Collections.Generic.ICollection`1" />.
+            </summary>
+        </member>
+        <member name="M:Tundra.Collections.ObservableDictionary`2.Contains(System.Collections.Generic.KeyValuePair{`0,`1})">
+            <summary>
+            Determines whether the <see cref="T:System.Collections.Generic.ICollection`1" /> contains a specific value.
+            </summary>
+            <param name="item">The object to locate in the <see cref="T:System.Collections.Generic.ICollection`1" />.</param>
+            <returns>
+            true if <paramref name="item" /> is found in the <see cref="T:System.Collections.Generic.ICollection`1" />; otherwise, false.
+            </returns>
+        </member>
+        <member name="M:Tundra.Collections.ObservableDictionary`2.CopyTo(System.Collections.Generic.KeyValuePair{`0,`1}[],System.Int32)">
+            <summary>
+            Copies to.
+            </summary>
+            <param name="array">The array.</param>
+            <param name="arrayIndex">Index of the array.</param>
+        </member>
+        <member name="M:Tundra.Collections.ObservableDictionary`2.Remove(System.Collections.Generic.KeyValuePair{`0,`1})">
+            <summary>
+            Removes the first occurrence of a specific object from the <see cref="T:System.Collections.Generic.ICollection`1" />.
+            </summary>
+            <param name="item">The object to remove from the <see cref="T:System.Collections.Generic.ICollection`1" />.</param>
+            <returns>
+            true if <paramref name="item" /> was successfully removed from the <see cref="T:System.Collections.Generic.ICollection`1" />; otherwise, false. This method also returns false if <paramref name="item" /> is not found in the original <see cref="T:System.Collections.Generic.ICollection`1" />.
+            </returns>
+        </member>
+        <member name="M:Tundra.Collections.ObservableDictionary`2.GetEnumerator">
+            <summary>
+            Returns an enumerator that iterates through the collection.
+            </summary>
+            <returns>
+            An enumerator that can be used to iterate through the collection.
+            </returns>
+        </member>
+        <member name="M:Tundra.Collections.ObservableDictionary`2.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            Returns an enumerator that iterates through a collection.
+            </summary>
+            <returns>
+            An <see cref="T:System.Collections.IEnumerator" /> object that can be used to iterate through the collection.
+            </returns>
+        </member>
+        <member name="M:Tundra.Collections.ObservableDictionary`2.AddRange(System.Collections.Generic.IDictionary{`0,`1})">
+            <summary>
+            Adds the range.
+            </summary>
+            <param name="items">The items.</param>
+            <exception cref="T:System.ArgumentNullException">items</exception>
+            <exception cref="T:System.ArgumentException">An item with the same key has already been added.</exception>
+        </member>
+        <member name="M:Tundra.Collections.ObservableDictionary`2.Insert(`0,`1,System.Boolean)">
+            <summary>
+            Inserts the specified key.
+            </summary>
+            <param name="key">The key.</param>
+            <param name="value">The value.</param>
+            <param name="add">if set to <c>true</c> [add].</param>
+            <exception cref="T:System.ArgumentNullException">key</exception>
+            <exception cref="T:System.ArgumentException">An item with the same key has already been added.</exception>
+        </member>
+        <member name="M:Tundra.Collections.ObservableDictionary`2.OnPropertyChanged">
+            <summary>
+            Called when a property has changed.
+            </summary>
+        </member>
+        <member name="M:Tundra.Collections.ObservableDictionary`2.OnPropertyChanged(System.String)">
+            <summary>
+            Called when a property has changed.
+            </summary>
+            <param name="propertyName">Name of the property.</param>
+        </member>
+        <member name="M:Tundra.Collections.ObservableDictionary`2.OnCollectionChanged">
+            <summary>
+            Called when the collection has changed.
+            </summary>
+        </member>
+        <member name="M:Tundra.Collections.ObservableDictionary`2.OnCollectionChanged(System.Collections.Specialized.NotifyCollectionChangedAction,System.Collections.Generic.KeyValuePair{`0,`1})">
+            <summary>
+            Called when the collection has changed.
+            </summary>
+            <param name="action">The action.</param>
+            <param name="changedItem">The changed item.</param>
+        </member>
+        <member name="M:Tundra.Collections.ObservableDictionary`2.OnCollectionChanged(System.Collections.Specialized.NotifyCollectionChangedAction,System.Collections.Generic.KeyValuePair{`0,`1},System.Collections.Generic.KeyValuePair{`0,`1})">
+            <summary>
+            Called when the collection has changed.
+            </summary>
+            <param name="action">The action.</param>
+            <param name="newItem">The new item.</param>
+            <param name="oldItem">The old item.</param>
+        </member>
+        <member name="M:Tundra.Collections.ObservableDictionary`2.OnCollectionChanged(System.Collections.Specialized.NotifyCollectionChangedAction,System.Collections.IList)">
+            <summary>
+            Called when the collection has changed.
+            </summary>
+            <param name="action">The action.</param>
+            <param name="newItems">The new items.</param>
+        </member>
+        <member name="P:Tundra.Collections.ObservableDictionary`2.Dictionary">
+            <summary>
+            Gets the dictionary.
+            </summary>
+            <value>
+            The dictionary.
+            </value>
+        </member>
+        <member name="P:Tundra.Collections.ObservableDictionary`2.Keys">
+            <summary>
+            Gets an <see cref="T:System.Collections.Generic.ICollection`1" /> containing the keys of the <see cref="T:System.Collections.Generic.IDictionary`2" />.
+            </summary>
+        </member>
+        <member name="P:Tundra.Collections.ObservableDictionary`2.Values">
+            <summary>
+            Gets an <see cref="T:System.Collections.Generic.ICollection`1" /> containing the values in the <see cref="T:System.Collections.Generic.IDictionary`2" />.
+            </summary>
+        </member>
+        <member name="P:Tundra.Collections.ObservableDictionary`2.Item(`0)">
+            <summary>
+            Gets or sets the element with the specified key.
+            </summary>
+            <param name="key">The key.</param>
+            <returns></returns>
+        </member>
+        <member name="P:Tundra.Collections.ObservableDictionary`2.Count">
+            <summary>
+            Gets the number of elements contained in the <see cref="T:System.Collections.Generic.ICollection`1" />.
+            </summary>
+        </member>
+        <member name="P:Tundra.Collections.ObservableDictionary`2.IsReadOnly">
+            <summary>
+            Gets a value indicating whether the <see cref="T:System.Collections.Generic.ICollection`1" /> is read-only.
+            </summary>
+        </member>
+        <member name="E:Tundra.Collections.ObservableDictionary`2.CollectionChanged">
+            <summary>
+            Occurs when the collection changes.
+            </summary>
+        </member>
+        <member name="E:Tundra.Collections.ObservableDictionary`2.PropertyChanged">
+            <summary>
+            Occurs when a property value changes.
+            </summary>
+        </member>
+        <member name="T:Tundra.Extension.EventHandlerExtensions">
+            <summary>
+            Event Handler Extension Methods
+            </summary>
+        </member>
+        <member name="M:Tundra.Extension.EventHandlerExtensions.Raise``1(System.EventHandler{``0},System.Object,``0)">
+            <summary>
+            Raises the specified sender.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="handler">The handler.</param>
+            <param name="sender">The sender.</param>
+            <param name="args">The arguments.</param>
+        </member>
+        <member name="T:Tundra.Extension.ObjectExtensions">
+            <summary>
+            Object Extension Class
+            </summary>
+        </member>
+        <member name="M:Tundra.Extension.ObjectExtensions.ToJsonString(System.Object)">
+            <summary>
+            To the json string.
+            </summary>
+            <param name="inputObject">The input object.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Tundra.Mock.MockNavigationService">
+            <summary>
+            Design Navigation Service Class
+            </summary>
+            <remarks>
+            Has no use what so ever besides the fact that it aids with design time development
+            </remarks>
+        </member>
+        <member name="M:Tundra.Mock.MockNavigationService.GoBack">
+            <summary>
+            If possible, instructs the navigation service
+            to discard the current page and display the previous page
+            on the navigation stack.
+            </summary>
+        </member>
+        <member name="M:Tundra.Mock.MockNavigationService.NavigateTo(System.String)">
+            <summary>
+            Instructs the navigation service to display a new page
+            corresponding to the given key. Depending on the platforms,
+            the navigation service might have to be configured with a
+            key/page list.
+            </summary>
+            <param name="pageKey">The key corresponding to the page
+            that should be displayed.</param>
+        </member>
+        <member name="M:Tundra.Mock.MockNavigationService.NavigateTo(System.String,System.Object)">
+            <summary>
+            Instructs the navigation service to display a new page
+            corresponding to the given key, and passes a parameter
+            to the new page.
+            Depending on the platforms, the navigation service might
+            have to be Configure with a key/page list.
+            </summary>
+            <param name="pageKey">The key corresponding to the page
+            that should be displayed.</param>
+            <param name="parameter">The parameter that should be passed
+            to the new page.</param>
+        </member>
+        <member name="P:Tundra.Mock.MockNavigationService.CurrentPageKey">
+            <summary>
+            The key corresponding to the currently displayed page.
+            </summary>
+        </member>
+        <member name="T:Tundra.Models.Tables.CacheTable">
+            <summary>
+            Cache Model Class
+            </summary>
+        </member>
+        <member name="P:Tundra.Models.Tables.CacheTable.Key">
+            <summary>
+            Gets or sets the key.
+            </summary>
+            <value>
+            The key.
+            </value>
+        </member>
+        <member name="P:Tundra.Models.Tables.CacheTable.Value">
+            <summary>
+            Gets or sets the value.
+            </summary>
+            <value>
+            The value.
+            </value>
+        </member>
+        <member name="P:Tundra.Models.Tables.CacheTable.Lifetime">
+            <summary>
+            Gets or sets the cache lifetime.
+            </summary>
+            <value>
+            The cache lifetime.
+            </value>
+        </member>
+        <member name="T:Tundra.Models.Tables.CacheTable.CacheLifetime">
+            <summary>
+            Defined the cache lifetime 
+            </summary>
+        </member>
+        <member name="F:Tundra.Models.Tables.CacheTable.CacheLifetime.ClearOnHome">
+            <summary>
+            The clear on home
+            </summary>
+        </member>
+        <member name="F:Tundra.Models.Tables.CacheTable.CacheLifetime.ClearOnLogout">
+            <summary>
+            The clear on logout
+            </summary>
+        </member>
+        <member name="F:Tundra.Models.Tables.CacheTable.CacheLifetime.ClearOnExit">
+            <summary>
+            The clear on exit
+            </summary>
+        </member>
+        <member name="F:Tundra.Models.Tables.CacheTable.CacheLifetime.ClearOnStart">
+            <summary>
+            The clear on start
+            </summary>
+        </member>
+        <member name="F:Tundra.Models.Tables.CacheTable.CacheLifetime.None">
+            <summary>
+            The none
+            </summary>
+        </member>
+        <member name="T:Tundra.Modules.DataAccessModule">
+            <summary>
+            Data Access Module Class
+            </summary>
+        </member>
+        <member name="F:Tundra.Modules.DataAccessModule._path">
+            <summary>
+            The db instance path
+            </summary>
+        </member>
+        <member name="M:Tundra.Modules.DataAccessModule.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Tundra.Modules.DataAccessModule"/> class.
+            </summary>
+            <param name="path">The path.</param>
+        </member>
+        <member name="M:Tundra.Modules.DataAccessModule.Load">
+            <summary>
+            Loads the module into the kernel.
+            </summary>
+        </member>
+        <member name="M:Tundra.Modules.DataAccessModule.CreateDatabaseMappings">
+            <summary>
+            Creates the database mappings.
+            </summary>
+        </member>
+        <member name="P:Tundra.Modules.DataAccessModule.DataAccessProvider">
+            <summary>
+            Gets the data access provider.
+            </summary>
+            <value>
+            The data access provider.
+            </value>
+        </member>
+        <member name="T:Tundra.Command.DelegateCommand`1">
+            <summary>
+            Delegate Command Class
+            </summary>
+        </member>
+        <member name="F:Tundra.Command.DelegateCommand`1._canExecute">
+            <summary>
+            The can execute predicate
+            </summary>
+        </member>
+        <member name="F:Tundra.Command.DelegateCommand`1._execute">
+            <summary>
+            The execute action
+            </summary>
+        </member>
+        <member name="M:Tundra.Command.DelegateCommand`1.#ctor(System.Action{`0})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Tundra.Command.DelegateCommand`1"/> class.
+            </summary>
+            <param name="execute">The execute.</param>
+        </member>
+        <member name="M:Tundra.Command.DelegateCommand`1.#ctor(System.Action{`0},System.Predicate{`0})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Tundra.Command.DelegateCommand`1"/> class.
+            </summary>
+            <param name="execute">The execute.</param>
+            <param name="canExecute">The can execute.</param>
+        </member>
+        <member name="M:Tundra.Command.DelegateCommand`1.CanExecute(System.Object)">
+            <summary>
+            Defines the method that determines whether the command can execute in its current state.
+            </summary>
+            <param name="parameter">Data used by the command.  If the command does not require data to be passed, this object can be set to null.</param>
+            <returns>
+            true if this command can be executed; otherwise, false.
+            </returns>
+        </member>
+        <member name="M:Tundra.Command.DelegateCommand`1.Execute(System.Object)">
+            <summary>
+            Defines the method to be called when the command is invoked.
+            </summary>
+            <param name="parameter">Data used by the command.  If the command does not require data to be passed, this object can be set to null.</param>
+        </member>
+        <member name="M:Tundra.Command.DelegateCommand`1.RaiseCanExecuteChanged">
+            <summary>
+            Raises the can execute changed.
+            </summary>
+        </member>
+        <member name="E:Tundra.Command.DelegateCommand`1.CanExecuteChanged">
+            <summary>
+            Occurs when changes occur that affect whether or not the command should execute.
+            </summary>
+        </member>
+        <member name="T:Tundra.Container.Ioc">
+            <summary>
+            Inversion of Control Class
+            </summary>
+            <remarks>
+            This is a singleton implementation and is marked as sealed. Thus inheritance cannot take place.
+            </remarks>
+        </member>
+        <member name="F:Tundra.Container.Ioc._container">
+            <summary>
+            The container
+            </summary>
+        </member>
+        <member name="F:Tundra.Container.Ioc._lock">
+            <summary>
+            The lock object
+            </summary>
+        </member>
+        <member name="P:Tundra.Container.Ioc.Container">
+            <summary>
+            Gets or sets the container.
+            </summary>
+            <value>
+            The container.
+            </value>
+        </member>
+        <member name="T:Tundra.Container.SimpleContainer">
+            <summary>
+            Simple Container
+            <para>
+            The Simple Container class can be used with the singleton implementation of <see cref="T:Tundra.Container.Ioc"/>
+            which will return an instance of <see cref="T:Tundra.Container.SimpleContainer"/>
+            </para>
+            </summary>
+        </member>
+        <member name="T:Tundra.Interfaces.Container.IContainer">
+            <summary>
+            Container Interface
+            </summary>
+        </member>
+        <member name="M:Tundra.Interfaces.Container.IContainer.Register``1">
+             <summary>
+             Registers and adds a type in the container.
+             </summary>
+             <typeparam name="TClass">The type of the class.</typeparam>
+             <exception cref="T:Tundra.Exceptions.DuplicateRegistrationException">thrown when an instance of a type is already registered.</exception>
+             <remarks>No remarks specified</remarks>
+             <example>
+             This example shows how to register an instance using <see cref="M:Tundra.Interfaces.Container.IContainer.Register``1"/>.
+             <code>
+             public class Person
+             {
+                 public string Name { get; set; }
+             }
+            
+             class TestClass
+             {
+                 static int Program(string[] args)
+                 {
+                     IoC.Container.Register&lt;Person&gt;();
+                 }
+             }
+             </code>
+             </example>
+        </member>
+        <member name="M:Tundra.Interfaces.Container.IContainer.Register``2">
+             <summary>
+             Registers a specified service / interface againt a concrete class
+             </summary>
+             <typeparam name="TService">The type of the service.</typeparam>
+             <typeparam name="TClass">The type of the class.</typeparam>
+             <exception cref="T:Tundra.Exceptions.DuplicateRegistrationException">thrown when the service of specified type is already registered.</exception>
+             <remarks>
+             An instance of the class is not created in this method. It only associates a interface with a contrete class. 
+             So when the interface is used, it will be injected with an instance of the concrete class
+             </remarks>
+             <example>
+             This example shows how to register an instance using <see cref="M:Tundra.Interfaces.Container.IContainer.Register``1"/>.
+             <code>
+             public interface IPerson
+             {
+                 string Name { get; set; }
+             }
+             
+             public class Person : IPerson
+             {
+                 public string Name { get; set; }
+             }
+            
+             class TestClass
+             {
+                 static int Program(string[] args)
+                 {
+                     IoC.Container.Register&lt;IPerson,Person&gt;();
+                 }
+             }
+             </code>
+             </example>
+        </member>
+        <member name="M:Tundra.Interfaces.Container.IContainer.RegisterInstance``1(``0)">
+             <summary>
+             Registers a service instance.
+             </summary>
+             <typeparam name="TService">The type of the service.</typeparam>
+             <param name="instance">The instance.</param>
+             <exception cref="T:Tundra.Exceptions.DuplicateRegistrationException">thrown when the service of specified type is already registered.</exception>
+             <remarks>No remarks specified</remarks>
+             <example>
+             This example shows how to register an instance using <see cref="M:Tundra.Interfaces.Container.IContainer.Register``1"/>.
+             <code>
+             public class Person
+             {
+                 public string Name { get; set; }
+             }
+            
+             class TestClass
+             {
+                 static int Program(string[] args)
+                 {
+                     IoC.Container.RegisterInstance&lt;Person&gt;(new Person());
+                 }
+             }
+             </code>
+             </example>
+        </member>
+        <member name="M:Tundra.Interfaces.Container.IContainer.Resolve``1">
+             <summary>
+             Resolves the instance based on the service type.
+             </summary>
+             <typeparam name="TService">The type of the service.</typeparam>
+             <returns>
+             an instance of TService
+             </returns>
+             <example>
+             This example shows how to resolve an instance using <see cref="M:Tundra.Interfaces.Container.IContainer.Resolve``1"/>.
+             <code>
+             public class Person
+             {
+                 public string Name { get; set; }
+             }
+            
+             class TestClass
+             {
+                 static int Program(string[] args)
+                 {
+                     Person person = IoC.Container.Resolve&lt;Person&gt;();
+                 }
+             }
+             </code>
+             </example>
+        </member>
+        <member name="M:Tundra.Interfaces.Container.IContainer.Resolve(System.Type)">
+             <summary>
+             Resolves an instance based on the specified type.
+             </summary>
+             <param name="type">The type of the service.</param>
+             <returns>
+             an instance of the type specified
+             </returns>
+             <exception cref="T:System.NotSupportedException">No registration found for service of Type specified</exception>
+             <example>
+             This example shows how to resolve an instance of the specified type.
+             <code>
+             public class Person
+             {
+                 public string Name { get; set; }
+             }
+            
+             class TestClass
+             {
+                 static int Program(string[] args)
+                 {
+                     Person person = IoC.Container.Resolve(typeof(Person)) as Person;
+                     if (person != null)
+                     {
+                         // use person object
+                     }
+                 }
+             }
+             </code>
+             </example>
+        </member>
+        <member name="M:Tundra.Container.SimpleContainer.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Tundra.Container.SimpleContainer"/> class.
+            </summary>
+        </member>
+        <member name="M:Tundra.Container.SimpleContainer.Register``1">
+            <summary>
+            Registers and adds a type in the container.
+            </summary>
+            <typeparam name="TClass">The type of the class.</typeparam>
+            <exception cref="T:Tundra.Exceptions.DuplicateRegistrationException">thrown when an instance of a type is already registered.</exception>
+            <remarks>No remarks specified</remarks>
+            <example>
+            This example shows how to register an instance using <see cref="M:Tundra.Container.SimpleContainer.Register``1"/>.
+            <code>
+            public class Person
+            {
+                public string Name { get; set; }
+            }
+            
+            class TestClass
+            {
+                static int Program(string[] args)
+                {
+                    Ioc.Container.Register&lt;Person&gt;();
+                }
+            }
+            </code>
+            </example>
+        </member>
+        <member name="M:Tundra.Container.SimpleContainer.Register``2">
+            <summary>
+            Registers a specified service / interface againt a concrete class
+            </summary>
+            <typeparam name="TService">The type of the service.</typeparam>
+            <typeparam name="TClass">The type of the class.</typeparam>
+            <exception cref="T:Tundra.Exceptions.DuplicateRegistrationException"></exception>
+            <exception cref="T:Tundra.Exceptions.DuplicateRegistrationException"></exception>
+            <remarks>
+            An instance of the class is not created in this method. It only associates a interface with a contrete class.
+            So when the interface is used, it will be injected with an instance of the concrete class
+            </remarks>
+            <example>
+            This example shows how to register an instance using <see cref="M:Tundra.Container.SimpleContainer.Register``1"/>.
+            <code>
+            public interface IPerson
+            {
+                string Name { get; set; }
+            }
+            public class Person : IPerson
+            {
+                public string Name { get; set; }
+            }
+            class TestClass
+            {
+                static int Program(string[] args)
+                {
+                    Ioc.Container.Register&lt;IPerson,Person&gt;();
+                }
+            }
+            </code></example>
+        </member>
+        <member name="M:Tundra.Container.SimpleContainer.RegisterInstance``1(``0)">
+            <summary>
+            Registers a service instance.
+            </summary>
+            <typeparam name="TService">The type of the service.</typeparam>
+            <param name="instance">The instance.</param>
+            <exception cref="T:Tundra.Exceptions.DuplicateRegistrationException"></exception>
+            <exception cref="T:Tundra.Exceptions.DuplicateRegistrationException">thrown when the service of specified type is already registered.</exception>
+            <remarks>
+            No remarks specified
+            </remarks>
+            <example>
+            This example shows how to register an instance using <see cref="M:Tundra.Container.SimpleContainer.Register``1"/>.
+            <code>
+            public class Person
+            {
+                public string Name { get; set; }
+            }
+            class TestClass
+            {
+                static int Program(string[] args)
+                {
+                    Ioc.Container.RegisterInstance&lt;Person&gt;(new Person());
+                }
+            }
+            </code></example>
+        </member>
+        <member name="M:Tundra.Container.SimpleContainer.Resolve``1">
+            <summary>
+            Resolves the instance based on the service type.
+            </summary>
+            <typeparam name="TService">The type of the service.</typeparam>
+            <returns>
+            an instance of TService
+            </returns>
+        </member>
+        <member name="M:Tundra.Container.SimpleContainer.Resolve(System.Type)">
+            <summary>
+            Resolves an instance based on the specified type.
+            </summary>
+            <param name="type">The type.</param>
+            <returns>
+            an instance of the type specified
+            </returns>
+            <exception cref="T:System.NotSupportedException">No registration found for service of Type specified</exception>
+        </member>
+        <member name="M:Tundra.Container.SimpleContainer.IsAlreadyRegistered``1">
+            <summary>
+            Determines whether the instance is already registered.
+            </summary>
+            <typeparam name="T">The type of service / interface or concrete class</typeparam>
+            <returns>
+              <c>true</c> if the instance or type is already registered
+            </returns>
+        </member>
+        <member name="P:Tundra.Container.SimpleContainer.Types">
+            <summary>
+            Gets or sets the types.
+            </summary>
+            <value>
+            The types.
+            </value>
+        </member>
+        <member name="P:Tundra.Container.SimpleContainer.Instances">
+            <summary>
+            Gets or sets the instances.
+            </summary>
+            <value>
+            The instances.
+            </value>
+        </member>
+        <member name="T:Tundra.Enum.HttpContentType">
+            <summary>
+            HTTP Content Types
+            </summary>
+        </member>
+        <member name="F:Tundra.Enum.HttpContentType.FormUrlEncoded">
+            <summary>
+            The form URL encoded content type
+            </summary>
+        </member>
+        <member name="F:Tundra.Enum.HttpContentType.String">
+            <summary>
+            The string content type
+            </summary>
+        </member>
+        <member name="T:Tundra.Enum.RESTMethod">
+            <summary>
+            REST Methods
+            </summary>
+        </member>
+        <member name="F:Tundra.Enum.RESTMethod.GET">
+            <summary>
+            The get
+            </summary>
+        </member>
+        <member name="F:Tundra.Enum.RESTMethod.POST">
+            <summary>
+            The post
+            </summary>
+        </member>
+        <member name="F:Tundra.Enum.RESTMethod.PUT">
+            <summary>
+            The put
+            </summary>
+        </member>
+        <member name="F:Tundra.Enum.RESTMethod.DELETE">
+            <summary>
+            The delete
+            </summary>
+        </member>
+        <member name="F:Tundra.Enum.RESTMethod.PATCH">
+            <summary>
+            The patch
+            </summary>
+        </member>
+        <member name="T:Tundra.Enum.SerializerFormat">
+            <summary>
+            Serializer Format Enum
+            </summary>
+        </member>
+        <member name="F:Tundra.Enum.SerializerFormat.JSON">
+            <summary>
+            The json serializer will be used
+            </summary>
+        </member>
+        <member name="F:Tundra.Enum.SerializerFormat.XML">
+            <summary>
+            The XML serializer will be used
+            </summary>
+        </member>
+        <member name="F:Tundra.Enum.SerializerFormat.None">
+            <summary>
+            Specifies that no serialization should occur
+            </summary>
+        </member>
+        <member name="T:Tundra.Exceptions.DuplicateRegistrationException">
+            <summary>
+            Duplicate Registration Exception Class
+            </summary>
+        </member>
+        <member name="M:Tundra.Exceptions.DuplicateRegistrationException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Tundra.Exceptions.DuplicateRegistrationException"/> class.
+            </summary>
+        </member>
+        <member name="M:Tundra.Exceptions.DuplicateRegistrationException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Tundra.Exceptions.DuplicateRegistrationException"/> class.
+            </summary>
+            <param name="message">The message that describes the error.</param>
+        </member>
+        <member name="M:Tundra.Exceptions.DuplicateRegistrationException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Tundra.Exceptions.DuplicateRegistrationException"/> class.
+            </summary>
+            <param name="message">The exception message.</param>
+            <param name="inner">The inner exception.</param>
+        </member>
+        <member name="T:Tundra.Extension.CollectionExtensions">
+            <summary>
+            Collection Extensions Class
+            </summary>
+        </member>
+        <member name="M:Tundra.Extension.CollectionExtensions.ToObservableCollection``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            To the observable collection.
+            </summary>
+            <typeparam name="T">The type of objects to observe. This type parameter is covariant.</typeparam>
+            <param name="collection">The collection.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tundra.Extension.CollectionExtensions.Each``1(System.Collections.Generic.ICollection{``0},System.Action{``0})">
+            <summary>
+            Executes the given action against the given ICollection instance.
+            </summary>
+            <typeparam name="T">The type of the ICollection parameter.</typeparam>
+            <param name="items">The collection the action is performed against.</param>
+            <param name="action">The action that is performed on each item.</param>
+        </member>
+        <member name="M:Tundra.Extension.CollectionExtensions.In``1(``0,``0[])">
+            <summary>
+            Determines whether a parameter is in a given list of parameters.
+            E.g.. 11.In(1,2,3) will return false.
+            </summary>
+            <typeparam name="T">The type of the source parameter.</typeparam>
+            <param name="source">The item that needs to be checked.</param>
+            <param name="list">The list that will be checked for the given source.</param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException">source</exception>
+        </member>
+        <member name="M:Tundra.Extension.CollectionExtensions.HasElements(System.Collections.ICollection)">
+            <summary>
+            Determines whether the specified collection has any elements in the sequence.
+            This method also checks for a null collection.
+            </summary>
+            <param name="items">The ICollection of items to check.</param>
+        </member>
+        <member name="M:Tundra.Extension.CollectionExtensions.ForEach``1(System.Collections.Generic.IEnumerable{``0},System.Action{``0})">
+            <summary>
+            Iterate over the collection.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="enumeration">The enumeration.</param>
+            <param name="action">The action.</param>
+        </member>
+        <member name="T:Tundra.Extension.DateTimeExtension">
+            <summary>
+            Date Time Extension Class
+            </summary>
+        </member>
+        <member name="M:Tundra.Extension.DateTimeExtension.IsWeekDay(System.DateTime)">
+            <summary>
+            Determines whether the day of week is part of a weekend.
+            </summary>
+            <param name="value">The value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tundra.Extension.DateTimeExtension.CompareYearMonthDay(System.DateTime,System.DateTime)">
+            <summary>
+            Compares the year month day.
+            </summary>
+            <param name="d">The d.</param>
+            <param name="compareTo">The compare to.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tundra.Extension.DateTimeExtension.UnixTimeStampToDateTime(System.Int64)">
+            <summary>
+            Unix's time stamp to .NET date time.
+            </summary>
+            <param name="unixTimeStamp">The Unix time stamp.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tundra.Extension.DateTimeExtension.JavaTimeStampToDateTime(System.Double)">
+            <summary>
+            Java's time stamp to .NET date time.
+            </summary>
+            <param name="javaTimeStamp">The java time stamp.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tundra.Extension.DateTimeExtension.DateTimeToUnixTimestamp(System.DateTime)">
+            <summary>
+            Dates the time to Unix timestamp.
+            </summary>
+            <param name="dateTime">The date time.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tundra.Extension.DateTimeExtension.GetWeekOfMonth(System.DateTime)">
+            <summary>
+            Gets the week of month.
+            </summary>
+            <param name="time">The time.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tundra.Extension.DateTimeExtension.GetWeekOfYear(System.DateTime)">
+            <summary>
+            Gets the week of year.
+            </summary>
+            <param name="time">The time.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tundra.Extension.DateTimeExtension.FirstDateOfWeekISO8601(System.Int32,System.Int32)">
+            <summary>
+            Get the first day of the week based on the following standardISO8601.
+            </summary>
+            <param name="year">The year.</param>
+            <param name="weekOfYear">The week of year.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tundra.Extension.DateTimeExtension.ToMonthName(System.DateTime)">
+            <summary>
+            To the name of the month.
+            </summary>
+            <param name="dateTime">The date time.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tundra.Extension.DateTimeExtension.ToShortMonthName(System.DateTime)">
+            <summary>
+            To the short name of the month.
+            </summary>
+            <param name="dateTime">The date time.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tundra.Extension.DateTimeExtension.StartOfWeek(System.DateTime,System.DayOfWeek)">
+            <summary>
+            Starts the of week.
+            </summary>
+            <param name="dt">The date.</param>
+            <param name="startOfWeek">The start of week.</param>
+            <returns></returns>
+            <example>
+            DateTime date = DateTime.Now.StartOfWeek(DayOfWeek.Monday);
+            </example>
+        </member>
+        <member name="T:Tundra.Extension.ExceptionExtensions">
+            <summary>
+            Exception Extension Methods
+            </summary>
+        </member>
+        <member name="M:Tundra.Extension.ExceptionExtensions.GetExceptionMessage(System.Exception)">
+            <summary>
+            Gets the exception message.
+            </summary>
+            <param name="exception">The exception.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Tundra.Extension.ExtensionHelper">
+            <summary>
+            Extension Helper Class
+            </summary>
+        </member>
+        <member name="M:Tundra.Extension.ExtensionHelper.Apply``2(``0,System.Func{``0,``1})">
+            <summary>
+            Applies the specified a.
+            </summary>
+            <typeparam name="A"></typeparam>
+            <typeparam name="B"></typeparam>
+            <param name="a">A.</param>
+            <param name="func">The function.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tundra.Extension.ExtensionHelper.IsBetween``1(``0,``0,``0)">
+            <summary>
+            Determines whether a value is between a minimum and maximum value.
+            </summary>
+            <typeparam name="T">The type of the value parameter.</typeparam>
+            <param name="value">The value that needs to be checked.</param>
+            <param name="low">The inclusive lower boundary.</param>
+            <param name="high">The inclusive upper boundary.</param>
+        </member>
+        <member name="M:Tundra.Extension.ExtensionHelper.Split``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Boolean},System.Boolean,System.Int32)">
+            <summary>
+            Splits the specified source.
+            </summary>
+            <typeparam name="TSource">The type of the source.</typeparam>
+            <param name="source">The source.</param>
+            <param name="partitionBy">The partition by.</param>
+            <param name="removeEmptyEntries">if set to <c>true</c> [remove empty entries].</param>
+            <param name="count">The count.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Tundra.Extension.HttpClientExtensions">
+            <summary>
+            Http Client Extension Class
+            </summary>
+        </member>
+        <member name="M:Tundra.Extension.HttpClientExtensions.SetContentTypeHeader(System.Net.Http.HttpClient,Tundra.Enum.SerializerFormat)">
+            <summary>
+            Sets the content type header.
+            </summary>
+            <param name="httpClient">The HTTP client.</param>
+            <param name="serializerFormat">The serializer format.</param>
+            <returns>
+            an <see cref="T:System.Net.Http.HttpClient"/> instance
+            </returns>
+        </member>
+        <member name="M:Tundra.Extension.HttpClientExtensions.SetRequestPayload``1(System.Net.Http.HttpClient,System.String,System.Net.Http.HttpMethod,``0,Tundra.Enum.HttpContentType,Tundra.Enum.SerializerFormat)">
+            <summary>
+            Sets the request payload.
+            </summary>
+            <typeparam name="TInput">The type of the input.</typeparam>
+            <param name="httpClient">The HTTP client.</param>
+            <param name="requestUri">The request URI.</param>
+            <param name="method">The method.</param>
+            <param name="inputObject">The input object.</param>
+            <param name="contentType">Type of the content.</param>
+            <param name="serializerFormat">The serializer format.</param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentException">In order to use a FormUrlEncoded content type, the input object must be of type: IEnumerable{KeyValuePair{string, string}};inputObject</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">contentType</exception>
+        </member>
+        <member name="M:Tundra.Extension.HttpClientExtensions.SendAsyncEx(System.Net.Http.HttpClient,System.String,System.Net.Http.HttpMethod,System.Nullable{System.Threading.CancellationToken})">
+            <summary>
+            Sends an HTTP request as an asynchronous operation.
+            </summary>
+            <param name="httpClient">The HTTP client.</param>
+            <param name="requestUri">The request URI.</param>
+            <param name="method">The method.</param>
+            <param name="token">The token.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tundra.Extension.HttpClientExtensions.SendAsyncEx``1(System.Net.Http.HttpClient,System.String,System.Net.Http.HttpMethod,``0,Tundra.Enum.HttpContentType,Tundra.Enum.SerializerFormat,System.Nullable{System.Threading.CancellationToken})">
+            <summary>
+            Sends an HTTP request as an asynchronous operation.
+            </summary>
+            <typeparam name="TInput">The type of the input.</typeparam>
+            <param name="httpClient">The HTTP client.</param>
+            <param name="requestUri">The request URI.</param>
+            <param name="method">The method.</param>
+            <param name="inputObject">The input object.</param>
+            <param name="contentType">Type of the content.</param>
+            <param name="serializerFormat">The serializer format.</param>
+            <param name="token">The token.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tundra.Extension.HttpClientExtensions.SendAsyncEx``1(System.Net.Http.HttpClient,System.String,System.Net.Http.HttpMethod,Tundra.Enum.SerializerFormat,System.Nullable{System.Threading.CancellationToken})">
+            <summary>
+            Sends an HTTP request as an asynchronous operation.
+            </summary>
+            <typeparam name="TResult">The type of the result.</typeparam>
+            <param name="httpClient">The HTTP client.</param>
+            <param name="requestUri">The request URI.</param>
+            <param name="method">The method.</param>
+            <param name="serializerFormat">The output format.</param>
+            <param name="token">The token.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tundra.Extension.HttpClientExtensions.SendAsyncEx(System.Net.Http.HttpClient,System.String,System.Net.Http.HttpMethod,Tundra.Enum.SerializerFormat,System.Nullable{System.Threading.CancellationToken})">
+            <summary>
+            Sends an HTTP request as an asynchronous operation.
+            </summary>
+            <param name="httpClient">The HTTP client.</param>
+            <param name="requestUri">The request URI.</param>
+            <param name="method">The method.</param>
+            <param name="serializerFormat">The serializer format.</param>
+            <param name="token">The token.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tundra.Extension.HttpClientExtensions.SendAsyncEx``2(System.Net.Http.HttpClient,System.String,System.Net.Http.HttpMethod,``0,Tundra.Enum.HttpContentType,Tundra.Enum.SerializerFormat,System.Nullable{System.Threading.CancellationToken})">
+            <summary>
+            Sends an HTTP request as an asynchronous operation.
+            </summary>
+            <typeparam name="TResult">The type of the result.</typeparam>
+            <typeparam name="TInput">The type of the input.</typeparam>
+            <param name="httpClient">The HTTP client.</param>
+            <param name="requestUri">The request URI.</param>
+            <param name="method">The method.</param>
+            <param name="inputObject">The input object.</param>
+            <param name="contentType">Type of the content.</param>
+            <param name="serializerFormat">The serializer format.</param>
+            <param name="token">The token.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Tundra.Extension.HttpResponseExtensions">
+            <summary>
+            HTTP Response Extension Method Class
+            </summary>
+        </member>
+        <member name="M:Tundra.Extension.HttpResponseExtensions.GetStringResponseAsync(System.Net.Http.HttpResponseMessage)">
+            <summary>
+            Gets the string response asynchronous.
+            </summary>
+            <param name="httpResponseMessage">The HTTP response message.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tundra.Extension.HttpResponseExtensions.GetStringResponseAsync(System.Threading.Tasks.Task{System.Net.Http.HttpResponseMessage})">
+            <summary>
+            Gets the string response asynchronous.
+            </summary>
+            <param name="httpResponseMessage">The HTTP response message.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tundra.Extension.HttpResponseExtensions.ProcessResponse``1(System.Net.Http.HttpResponseMessage,Tundra.Enum.SerializerFormat)">
+            <summary>
+            Processes the response.
+            </summary>
+            <typeparam name="TResult">The type of the result.</typeparam>
+            <param name="responseMessage">The response message.</param>
+            <param name="outputFormat">The output format.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tundra.Extension.HttpResponseExtensions.ProcessResponse``1(System.Threading.Tasks.Task{System.Net.Http.HttpResponseMessage},Tundra.Enum.SerializerFormat)">
+            <summary>
+            Processes the response.
+            </summary>
+            <typeparam name="TResult">The type of the result.</typeparam>
+            <param name="responseMessage">The response message.</param>
+            <param name="outputFormat">The output format.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Tundra.Extension.NinjectExtensions">
+            <summary>
+            Ninject Extension Class Declaration
+            </summary>
+        </member>
+        <member name="M:Tundra.Extension.NinjectExtensions.Bind``2(Ninject.IKernel)">
+            <summary>
+            Binds the specified kernel.
+            </summary>
+            <typeparam name="TService">The type of the service.</typeparam>
+            <typeparam name="TClass">The type of the class.</typeparam>
+            <param name="kernel">The kernel.</param>
+        </member>
+        <member name="M:Tundra.Extension.NinjectExtensions.HasActiveBinding``1(Ninject.IKernel)">
+            <summary>
+            Determines whether the ninject kernel has an active binding of the <see cref="!:TService"/> provided.
+            </summary>
+            <typeparam name="TService">The type of the service.</typeparam>
+            <param name="kernel">The kernel.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tundra.Extension.NinjectExtensions.BindIfNull``2(Ninject.IKernel)">
+            <summary>
+            Indicates that the service should be bound to the specified implementation type.
+            </summary>
+            <typeparam name="TService">The type of the service.</typeparam>
+            <typeparam name="TClass">The type of the class.</typeparam>
+            <param name="kernel">The kernel.</param>
+        </member>
+        <member name="M:Tundra.Extension.NinjectExtensions.BindToConstant``2(Ninject.IKernel,``1)">
+            <summary>
+            Binds the specified service to a constant class instance.
+            </summary>
+            <typeparam name="TService">The type of the service.</typeparam>
+            <typeparam name="TClass">The type of the class.</typeparam>
+            <param name="kernel">The kernel.</param>
+            <param name="class">The class.</param>
+        </member>
+        <member name="M:Tundra.Extension.NinjectExtensions.BindToConstantSingleton``2(Ninject.IKernel)">
+            <summary>
+            Binds to constant singleton.
+            </summary>
+            <typeparam name="TService">The type of the service.</typeparam>
+            <typeparam name="TClass">The type of the class.</typeparam>
+            <param name="kernel">The kernel.</param>
+        </member>
+        <member name="M:Tundra.Extension.NinjectExtensions.BindToSelf``1(Ninject.IKernel)">
+            <summary>
+            Binds to self.
+            </summary>
+            <typeparam name="TClass">The type of the class.</typeparam>
+            <param name="kernel">The kernel.</param>
+        </member>
+        <member name="M:Tundra.Extension.NinjectExtensions.BindToSelfSingleton``1(Ninject.IKernel)">
+            <summary>
+            Binds to self singleton.
+            </summary>
+            <typeparam name="TClass">The type of the class.</typeparam>
+            <param name="kernel">The kernel.</param>
+        </member>
+        <member name="M:Tundra.Extension.NinjectExtensions.BindToSelfConstant``1(Ninject.IKernel,``0)">
+            <summary>
+            Binds to self constant.
+            </summary>
+            <typeparam name="TClass">The type of the class.</typeparam>
+            <param name="kernel">The kernel.</param>
+            <param name="class">The class.</param>
+        </member>
+        <member name="M:Tundra.Extension.NinjectExtensions.RebindToSelfSingleton``1(Ninject.IKernel)">
+            <summary>
+            Rebinds to self singleton.
+            </summary>
+            <typeparam name="TClass">The type of the class.</typeparam>
+            <param name="kernel">The kernel.</param>
+        </member>
+        <member name="T:Tundra.Extension.StreamExtensions">
+            <summary>
+            Stream Extensions Class
+            </summary>
+        </member>
+        <member name="M:Tundra.Extension.StreamExtensions.ToByteArray(System.IO.Stream)">
+            <summary>
+            To the byte array.
+            </summary>
+            <param name="stream">The stream.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Tundra.Extension.StringExtensions">
+            <summary>
+            String Extensions Class
+            </summary>
+        </member>
+        <member name="M:Tundra.Extension.StringExtensions.SplitIntoParts(System.String,System.Int32)">
+            <summary>
+            Splits the into parts.
+            </summary>
+            <param name="input">The input.</param>
+            <param name="partLength">Length of the part.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Tundra.Helper.AsyncHelper">
+            <summary>
+            A-synchronize Helper Class
+            </summary>
+        </member>
+        <member name="M:Tundra.Helper.AsyncHelper.LoadData``1(System.Action{``0},System.Func{System.Threading.Tasks.Task{``0}})">
+            <summary>
+            Loads the data in an asynchronous manner.
+            </summary>
+            <typeparam name="T">The specified type that is expected when callback is called as well as the loaded func.</typeparam>
+            <param name="callback">The callback.</param>
+            <param name="loader">The loader.</param>
+        </member>
+        <member name="M:Tundra.Helper.AsyncHelper.LoadData(System.Action,System.Func{System.Threading.Tasks.Task})">
+             <summary>
+             Loads the data in an asynchronous manner.
+             </summary>
+             <param name="callback">The callback.</param>
+             <param name="loader">The loader.</param>
+             <example>
+             <code>
+                 class Foo
+                 {
+                     void Run()
+                     {
+                         AsyncHelper.LoadData(() =>
+                         {
+                             // callback region
+                         }, DoWork);
+                     }
+            
+                     async Task DoWork()
+                     {
+                         await Task.Factory.StartNew(() =>
+                         {
+                             // do some long running operation
+                         });
+                     }
+                 }
+             </code>
+             </example>
+        </member>
+        <member name="T:Tundra.Helper.ConvertHelper">
+            <summary>
+            Convert Helper Class
+            </summary>
+        </member>
+        <member name="F:Tundra.Helper.ConvertHelper.JsonContentType">
+            <summary>
+            The json content type
+            </summary>
+        </member>
+        <member name="F:Tundra.Helper.ConvertHelper.XmlContentType">
+            <summary>
+            The XML content type
+            </summary>
+        </member>
+        <member name="M:Tundra.Helper.ConvertHelper.ToMediaType(Tundra.Enum.SerializerFormat)">
+            <summary>
+            Converts the content type to a media type.
+            </summary>
+            <param name="serializerFormat">The serializer format.</param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">serializerFormat</exception>
+        </member>
+        <member name="T:Tundra.Interfaces.Messaging.IMessageBus">
+            <summary>
+            Interface for a Message Bus.  A Message Bus is a central messaging system for
+            an application.
+            </summary>
+        </member>
+        <member name="M:Tundra.Interfaces.Messaging.IMessageBus.Subscribe``1(System.Action{``0})">
+            <summary>
+            Subscribes an action to a particular message type.  When that message type
+            is published, this action will be called.
+            </summary>
+            <typeparam name="TMessage">The type of message to listen for.</typeparam>
+            <param name="handler">
+            The action which will be called when a message of type <typeparamref name="TMessage"/>
+            is published.
+            </param>
+        </member>
+        <member name="M:Tundra.Interfaces.Messaging.IMessageBus.Unsubscribe``1(System.Action{``0})">
+            <summary>
+            Unsubscribe an action from a particular message type.
+            </summary>
+            <typeparam name="TMessage">The type of message to stop listening for.</typeparam>
+            <param name="handler">
+            The action which is to be unsubscribed from messages of type <typeparamref name="TMessage"/>.
+            </param>
+        </member>
+        <member name="M:Tundra.Interfaces.Messaging.IMessageBus.Publish``1(``0)">
+            <summary>
+            Publishes a message to any subscribers of a particular message type.
+            </summary>
+            <typeparam name="TMessage">The type of message to publish.</typeparam>
+            <param name="message">The message to be published</param>
+        </member>
+        <member name="T:Tundra.Interfaces.Platform.IDeviceInformation">
+            <summary>
+            Device Information Interface
+            </summary>
+        </member>
+        <member name="M:Tundra.Interfaces.Platform.IDeviceInformation.GetDeviceId">
+            <summary>
+            Gets the device identifier.
+            </summary>
+            <returns>the unique device identifier</returns>
+        </member>
+        <member name="T:Tundra.Interfaces.Platform.IToolWindow">
+            <summary>
+            Tool Window Interface Declaration
+            </summary>
+        </member>
+        <member name="M:Tundra.Interfaces.Platform.IToolWindow.ShowToolWindow(System.String,System.String,System.Boolean)">
+            <summary>
+            Shows the tool window.
+            </summary>
+            <param name="title">The title.</param>
+            <param name="message">The message.</param>
+            <param name="showCloseAction">if set to <c>true</c> the default close action will be shown.</param>
+        </member>
+        <member name="M:Tundra.Interfaces.Platform.IToolWindow.ShowToolWindow``2(System.String,System.Boolean)">
+            <summary>
+            Shows the tool window.
+            </summary>
+            <typeparam name="TViewModel">The type of the view model.</typeparam>
+            <typeparam name="TView">The type of the view.</typeparam>
+            <param name="title">The title.</param>
+            <param name="showCloseAction">if set to <c>true</c> the default close action will be shown.</param>
+            <example>
+            // inject the tool window interface
+            IToolWindow toolWindow;
+            // call the show tool window method
+            toolWindow.ShowToolWindow&lt;PersonViewModel, IPersonView&gt;("This is some title");
+            // call the show tool window method without any body view
+            toolWindow.ShowToolWindow("This is a title", "this is some message text");
+            </example>
+        </member>
+        <member name="M:Tundra.Interfaces.Platform.IToolWindow.DismissToolWindow">
+            <summary>
+            Dismisses the tool window.
+            </summary>
+        </member>
+        <member name="E:Tundra.Interfaces.Platform.IToolWindow.CloseRequested">
+            <summary>
+            Occurs when tool window is closed.
+            </summary>
+        </member>
+        <member name="T:Tundra.Interfaces.Provider.ICalendarProvider">
+            <summary>
+            Calendar Sync Interface
+            </summary>
+        </member>
+        <member name="M:Tundra.Interfaces.Provider.ICalendarProvider.SaveAppointments``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Saves the appointments.
+            </summary>
+            <typeparam name="TModel">The type of the model.</typeparam>
+            <param name="bookingModels">The booking models.</param>
+        </member>
+        <member name="M:Tundra.Interfaces.Provider.ICalendarProvider.SaveAppointmentsAsync``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Saves the appointments asynchronous.
+            </summary>
+            <typeparam name="TModel">The type of the model.</typeparam>
+            <param name="bookingModels">The booking models.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Tundra.Interfaces.View.IBaseView">
+            <summary>
+            Base View Interface Declaration
+            </summary>
+        </member>
+        <member name="P:Tundra.Interfaces.View.IBaseView.DataContext">
+            <summary>
+            Gets or sets the data context.
+            </summary>
+            <value>
+            The data context.
+            </value>
+        </member>
+        <member name="T:Tundra.Messaging.ActionReference">
+            <summary>
+            Maintains a weak reference to an action/delegate.
+            </summary>
+        </member>
+        <member name="M:Tundra.Messaging.ActionReference.#ctor(System.Delegate)">
+            <summary>
+            Constructor for ActionReference.
+            </summary>
+            <param name="action">The action/delegate to be referenced.</param>
+        </member>
+        <member name="P:Tundra.Messaging.ActionReference.WeakReference">
+            <summary>
+            Gets or sets the weak reference.
+            </summary>
+            <value>
+            The weak reference.
+            </value>
+        </member>
+        <member name="P:Tundra.Messaging.ActionReference.Target">
+            <summary>
+            Gets the action/delegate this reference targets.
+            </summary>
+        </member>
+        <member name="P:Tundra.Messaging.ActionReference.IsAlive">
+            <summary>
+            Gets whether the reference is still alive.
+            </summary>
+        </member>
+        <member name="T:Tundra.Messaging.MessageBus">
+            <summary>
+            Message Bus Class
+            </summary>
+        </member>
+        <member name="F:Tundra.Messaging.MessageBus.subscribers">
+            <summary>
+            The subscribers
+            </summary>
+        </member>
+        <member name="F:Tundra.Messaging.MessageBus.lock">
+            <summary>
+            The lock
+            </summary>
+        </member>
+        <member name="M:Tundra.Messaging.MessageBus.Subscribe``1(System.Action{``0})">
+            <summary>
+            Subscribes an action to a particular message type.  When that message type
+            is published, this action will be called.
+            </summary>
+            <typeparam name="TMessage">The type of message to listen for.</typeparam>
+            <param name="handler">
+            The action which will be called when a message of type <typeparamref name="TMessage"/>
+            is published.
+            </param>
+        </member>
+        <member name="M:Tundra.Messaging.MessageBus.Unsubscribe``1(System.Action{``0})">
+            <summary>
+            Unsubscribe an action from a particular message type.
+            </summary>
+            <typeparam name="TMessage">The type of message to stop listening for.</typeparam>
+            <param name="handler">
+            The action which is to be unsubscribed from messages of type <typeparamref name="TMessage"/>.
+            </param>
+        </member>
+        <member name="M:Tundra.Messaging.MessageBus.Publish``1(``0)">
+            <summary>
+            Publishes a message to any subscribers of a particular message type.
+            </summary>
+            <typeparam name="TMessage">The type of message to publish.</typeparam>
+            <param name="message">The message to be published</param>
+        </member>
+        <member name="M:Tundra.Messaging.MessageBus.RefreshAndGetSubscribers``1">
+            <summary>
+            Refreshes the and get subscribers.
+            </summary>
+            <typeparam name="TMessage">The type of the message.</typeparam>
+            <returns></returns>
+        </member>
+        <member name="T:Tundra.Mock.MockDeviceInformation">
+            <summary>
+            Design Device Information Class Declaration
+            </summary>
+            <remarks>
+            Has no use what so ever besides the fact that it aids with design time development
+            </remarks>
+        </member>
+        <member name="M:Tundra.Mock.MockDeviceInformation.GetDeviceId">
+            <summary>
+            Gets the device identifier.
+            </summary>
+            <returns>
+            the unique device identifier
+            </returns>
+        </member>
+        <member name="T:Tundra.Mock.MockToolWindow">
+            <summary>
+            Mock Tool Window Class
+            </summary>
+            <remarks>
+            Has no use what so ever besides the fact that it aids with design time development
+            </remarks>
+        </member>
+        <member name="M:Tundra.Mock.MockToolWindow.ShowToolWindow(System.String,System.String,System.Boolean)">
+            <summary>
+            Shows the tool window.
+            </summary>
+            <param name="title">The title.</param>
+            <param name="message">The message.</param>
+            <param name="showCloseAction">if set to <c>true</c> the default close action will be shown.</param>
+        </member>
+        <member name="M:Tundra.Mock.MockToolWindow.ShowToolWindow``2(System.String,System.Boolean)">
+            <summary>
+            Shows the tool window.
+            </summary>
+            <typeparam name="TViewModel">The type of the view model.</typeparam>
+            <typeparam name="TView">The type of the view.</typeparam>
+            <param name="title">The title.</param>
+            <param name="showCloseAction">if set to <c>true</c> the default close action will be shown.</param>
+            <example>
+            // inject the tool window interface
+            IToolWindow toolWindow;
+            // call the show tool window method
+            toolWindow.ShowToolWindow&lt;PersonViewModel, IPersonView&gt;("This is some title");
+            // call the show tool window method without any body view
+            toolWindow.ShowToolWindow("This is a title", "this is some message text");
+            </example>
+        </member>
+        <member name="M:Tundra.Mock.MockToolWindow.DismissToolWindow">
+            <summary>
+            Dismisses the tool window.
+            </summary>
+        </member>
+        <member name="E:Tundra.Mock.MockToolWindow.CloseRequested">
+            <summary>
+            Occurs when tool window is closed.
+            </summary>
+        </member>
+        <member name="T:Tundra.Modules.ViewModelLocatorModule">
+            <summary>
+            View Model Locator Module Class
+            </summary>
+        </member>
+        <member name="M:Tundra.Modules.ViewModelLocatorModule.Load">
+            <summary>
+            Loads the module into the kernel.
+            </summary>
+        </member>
+        <member name="T:Tundra.Providers.BaseCacheProvider">
+            <summary>
+            Base Cache Provider Class
+            </summary>
+        </member>
+        <member name="M:Tundra.Providers.BaseCacheProvider.#ctor(Tundra.Interfaces.Data.IDataAccess)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Tundra.Providers.BaseCacheProvider"/> class.
+            </summary>
+            <param name="dataStore">The data store.</param>
+            <exception cref="T:System.ArgumentNullException">dataStore;There aren't any bindings associated with the interface IDataAccess. Provide a binding in the IKernel instance.</exception>
+        </member>
+        <member name="M:Tundra.Providers.BaseCacheProvider.GetCacheData``1(System.String)">
+            <summary>
+            Gets the cached data.
+            </summary>
+            <typeparam name="TResult">The type of the result.</typeparam>
+            <param name="keyName">Name of the key.</param>
+            <returns></returns>
+            <exception cref="T:System.NullReferenceException">DataStore is null. Make use of the appropriate base overload constructor and pass in an IDataAccess</exception>
+        </member>
+        <member name="M:Tundra.Providers.BaseCacheProvider.StoreCacheData``1(``0,Tundra.Models.Tables.CacheTable.CacheLifetime,System.String)">
+            <summary>
+            Stores the cache data.
+            </summary>
+            <typeparam name="TValue">The type of the value.</typeparam>
+            <param name="value">The value.</param>
+            <param name="lifetime">The lifetime.</param>
+            <param name="keyName">Name of the key.</param>
+            <exception cref="T:System.NullReferenceException">DataStore is null. Make use of the appropriate base overload constructor and pass in an IDataAccess</exception>
+        </member>
+        <member name="M:Tundra.Providers.BaseCacheProvider.ClearCacheData(System.Func{Tundra.Models.Tables.CacheTable,System.Boolean})">
+            <summary>
+            Clears the cache data based on the filter provided.
+            </summary>
+            <param name="lifetimeFilter">The lifetime filter.</param>
+        </member>
+        <member name="P:Tundra.Providers.BaseCacheProvider.DataStore">
+            <summary>
+            Gets the data store.
+            </summary>
+            <value>
+            The data store.
+            </value>
+        </member>
+        <member name="T:Tundra.Providers.DataAccessProvider">
+            <summary>
+            Data Access Provider Class
+            </summary>
+        </member>
+        <member name="T:Tundra.Interfaces.Data.IDataAccess">
+            <summary>
+            Data Access Interface
+            </summary>
+        </member>
+        <member name="M:Tundra.Interfaces.Data.IDataAccess.Map``2(System.Linq.Expressions.Expression{System.Func{``0,``1}})">
+            <summary>
+            Maps the specified mapping function.
+            </summary>
+            <typeparam name="T">The table type</typeparam>
+            <typeparam name="K">The type of the key selector in the table</typeparam>
+            <param name="keyBuilder">The key builder.</param>
+        </member>
+        <member name="M:Tundra.Interfaces.Data.IDataAccess.Initialize">
+            <summary>
+            Initializes this instance.
+            </summary>
+        </member>
+        <member name="M:Tundra.Interfaces.Data.IDataAccess.DeleteAllData``1">
+            <summary>
+            Deletes all data from the data table specified.
+            </summary>
+            <typeparam name="T">The type of the table object</typeparam>
+            <returns>The number of records affected</returns>
+        </member>
+        <member name="M:Tundra.Interfaces.Data.IDataAccess.DeleteByFilter``1(System.Func{``0,System.Boolean})">
+            <summary>
+            Deletes the by filter.
+            </summary>
+            <typeparam name="T">The type of the table object</typeparam>
+            <param name="filter">The filter.</param>
+            <returns>
+            The number of records affected
+            </returns>
+        </member>
+        <member name="M:Tundra.Interfaces.Data.IDataAccess.GetAllEntries``1">
+            <summary>
+            Gets all entries from the data table specified.
+            </summary>
+            <typeparam name="T">The type of the table object</typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:Tundra.Interfaces.Data.IDataAccess.GetFilteredEntries``1(System.Func{``0,System.Boolean})">
+            <summary>
+            Gets the filtered entries based on the filter expression specified.
+            </summary>
+            <typeparam name="T">The type of the table object</typeparam>
+            <param name="filter">The filter.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tundra.Interfaces.Data.IDataAccess.GetFilteredEntry``1(System.Func{``0,System.Boolean})">
+            <summary>
+            Gets the filtered entry based on the filter expression specified.
+            </summary>
+            <typeparam name="T">The type of the table object</typeparam>
+            <param name="filter">The filter.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tundra.Interfaces.Data.IDataAccess.InsertOrUpdateTable``1(``0)">
+            <summary>
+            Inserts the or updates table.
+            </summary>
+            <typeparam name="T">The type of the table object</typeparam>
+            <param name="dataEntry">The data entry.</param>
+        </member>
+        <member name="M:Tundra.Interfaces.Data.IDataAccess.InsertOrUpdateTable``2(``0,``1)">
+            <summary>
+            Inserts the or updates table and returns the newly inserted item.
+            </summary>
+            <typeparam name="T">The type of the table object</typeparam>
+            <typeparam name="K">The type of the primary key value</typeparam>
+            <param name="dataEntry">The data entry.</param>
+            <param name="key">The key.</param>
+            <returns>
+            an instance of table type specified; otherwise null if nothing could be found
+            </returns>
+        </member>
+        <member name="M:Tundra.Interfaces.Data.IDataAccess.SaveAllData``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Saves all data to the data table specified.
+            </summary>
+            <typeparam name="T">The type of the table object</typeparam>
+            <param name="items">The items.</param>
+        </member>
+        <member name="F:Tundra.Providers.DataAccessProvider._db">
+            <summary>
+            The DB instance
+            </summary>
+        </member>
+        <member name="M:Tundra.Providers.DataAccessProvider.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Tundra.Providers.DataAccessProvider"/> class.
+            </summary>
+            <param name="path">The path.</param>
+        </member>
+        <member name="M:Tundra.Providers.DataAccessProvider.Map``2(System.Linq.Expressions.Expression{System.Func{``0,``1}})">
+            <summary>
+            Maps the specified mapping function.
+            </summary>
+            <typeparam name="T">The type of the table in the data source</typeparam>
+            <typeparam name="K">The type of the key selector in the table</typeparam>
+            <param name="keyBuilder">The key builder.</param>
+        </member>
+        <member name="M:Tundra.Providers.DataAccessProvider.Initialize">
+            <summary>
+            Initializes this instance.
+            </summary>
+        </member>
+        <member name="M:Tundra.Providers.DataAccessProvider.DeleteAllData``1">
+            <summary>
+            Deletes all data from the data table specified.
+            </summary>
+            <typeparam name="T">The type of the table object</typeparam>
+            <returns>The number of records affected</returns>
+        </member>
+        <member name="M:Tundra.Providers.DataAccessProvider.DeleteByFilter``1(System.Func{``0,System.Boolean})">
+            <summary>
+            Deletes the by filter.
+            </summary>
+            <typeparam name="T">The type of the table object</typeparam>
+            <param name="filter">The filter.</param>
+            <returns>
+            The number of records affected
+            </returns>
+        </member>
+        <member name="M:Tundra.Providers.DataAccessProvider.GetAllEntries``1">
+            <summary>
+            Gets all entries.
+            </summary>
+            <typeparam name="T">The type of the table in the data source</typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:Tundra.Providers.DataAccessProvider.GetFilteredEntries``1(System.Func{``0,System.Boolean})">
+            <summary>
+            Gets the filtered entries.
+            </summary>
+            <typeparam name="T">The type of the table in the data source</typeparam>
+            <param name="filter">The filter.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tundra.Providers.DataAccessProvider.GetFilteredEntry``1(System.Func{``0,System.Boolean})">
+            <summary>
+            Gets the filtered entry.
+            </summary>
+            <typeparam name="T">The type of the table in the data source</typeparam>
+            <param name="filter">The filter.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tundra.Providers.DataAccessProvider.InsertOrUpdateTable``1(``0)">
+            <summary>
+            Inserts the or update table.
+            </summary>
+            <typeparam name="T">The type of the table in the data source</typeparam>
+            <param name="dataEntry">The data entry.</param>
+        </member>
+        <member name="M:Tundra.Providers.DataAccessProvider.InsertOrUpdateTable``2(``0,``1)">
+            <summary>
+            Inserts the or updates table and returns the newly inserted item.
+            </summary>
+            <typeparam name="T">The type of the table object</typeparam>
+            <typeparam name="K">The type of the primary key value</typeparam>
+            <param name="dataEntry">The data entry.</param>
+            <param name="key">The key.</param>
+            <returns>
+            an instance of table type specified; otherwise null if nothing could be found
+            </returns>
+        </member>
+        <member name="M:Tundra.Providers.DataAccessProvider.SaveAllData``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Saves all data.
+            </summary>
+            <typeparam name="T">The type of the table in the data source</typeparam>
+            <param name="items">The items.</param>
+        </member>
+        <member name="M:Tundra.Providers.DataAccessProvider.Dispose">
+            <summary>
+            Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            </summary>
+        </member>
+        <member name="M:Tundra.Providers.DataAccessProvider.Finalize">
+            <summary>
+            Finalizes an instance of the <see cref="T:Tundra.Providers.DataAccessProvider"/> class.
+            </summary>
+        </member>
+        <member name="M:Tundra.Providers.DataAccessProvider.Dispose(System.Boolean)">
+            <summary>
+            Releases unmanaged and - optionally - managed resources.
+            </summary>
+            <param name="disposing"><c>true</c> to release both managed and unmanaged resources; <c>false</c> to release only unmanaged resources.</param>
+        </member>
+        <member name="T:Tundra.Wrapper.JsonSerializerWrapper">
+            <summary>
+            Json Serializer Wrapper Class
+            </summary>
+        </member>
+        <member name="T:Tundra.Interfaces.Serializer.ISerializer">
+            <summary>
+            An interface for serializing and desterilizing objects.
+            </summary>
+        </member>
+        <member name="M:Tundra.Interfaces.Serializer.ISerializer.Deserialize``1(System.String)">
+            <summary>
+            Deserializes an object.
+            </summary>
+            <typeparam name="T">The type of object to de-serialize.</typeparam>
+            <param name="data">The string data to use for deserialization.</param>
+            <returns>Returns the deserialized object.</returns>
+        </member>
+        <member name="M:Tundra.Interfaces.Serializer.ISerializer.Serialize``1(``0)">
+            <summary>
+            Serializes an object to a string.
+            </summary>
+            <param name="instance">The object to serialize.</param>
+            <returns>Returns the object serialized as a string.</returns>
+        </member>
+        <member name="M:Tundra.Wrapper.JsonSerializerWrapper.Deserialize``1(System.String)">
+            <summary>
+            Deserializes an object.
+            </summary>
+            <typeparam name="T">The type of object to de-serialize.</typeparam>
+            <param name="data">The string data to use for deserialization.</param>
+            <returns>
+            Returns the deserialized object.
+            </returns>
+        </member>
+        <member name="M:Tundra.Wrapper.JsonSerializerWrapper.Serialize``1(``0)">
+            <summary>
+            Serializes an object to a string.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="instance">The object to serialize.</param>
+            <returns>
+            Returns the object serialized as a string.
+            </returns>
+        </member>
+        <member name="T:Tundra.Helper.SerializerHelper">
+            <summary>
+            Serializer Helper Class
+            </summary>
+        </member>
+        <member name="M:Tundra.Helper.SerializerHelper.DeserializeData``1(Tundra.Enum.SerializerFormat,System.String)">
+            <summary>
+            Deserializes the data.
+            </summary>
+            <typeparam name="TResult">The type of the result.</typeparam>
+            <param name="format">The format.</param>
+            <param name="xml">The XML.</param>
+            <returns>
+            a deserialized instance of <typeparam name="TResult"/>
+            </returns>
+            <exception cref="T:System.ArgumentNullException">xml</exception>
+        </member>
+        <member name="M:Tundra.Helper.SerializerHelper.SerializeObject``1(``0,Tundra.Enum.SerializerFormat)">
+            <summary>
+            Serializes the object.
+            </summary>
+            <typeparam name="TInput">The type of the input.</typeparam>
+            <param name="inputObject">The input object.</param>
+            <param name="format">The format.</param>
+            <returns>
+            a serialized string
+            </returns>
+            <exception cref="T:System.ArgumentNullException">inputObject</exception>
+        </member>
+        <member name="T:Tundra.Interfaces.Credentials.INetCredential">
+            <summary>
+            Network Credential Interface
+            </summary>
+        </member>
+        <member name="P:Tundra.Interfaces.Credentials.INetCredential.Domain">
+            <summary>
+            Gets or sets the domain.
+            </summary>
+            <value>
+            The domain.
+            </value>
+        </member>
+        <member name="P:Tundra.Interfaces.Credentials.INetCredential.Password">
+            <summary>
+            Gets or sets the password.
+            </summary>
+            <value>
+            The password.
+            </value>
+        </member>
+        <member name="P:Tundra.Interfaces.Credentials.INetCredential.UserName">
+            <summary>
+            Gets or sets the name of the user.
+            </summary>
+            <value>
+            The name of the user.
+            </value>
+        </member>
+        <member name="T:Tundra.Interfaces.Errors.IErrorInformation">
+            <summary>
+            Error Information Interface
+            </summary>
+        </member>
+        <member name="P:Tundra.Interfaces.Errors.IErrorInformation.Cancellation">
+            <summary>
+            Gets a value indicating whether this <see cref="T:Tundra.Interfaces.Errors.IErrorInformation"/> was caused by a cancellation.
+            </summary>
+            <value>
+              <c>true</c> if cancellation; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Tundra.Interfaces.Errors.IErrorInformation.Error">
+            <summary>
+            Gets or sets the error.
+            </summary>
+            <value>
+            The error.
+            </value>
+        </member>
+        <member name="T:Tundra.Interfaces.Platform.INavigationService">
+            <summary>
+            The navigation service to
+            enable page navigation.
+            For all our platforms.
+            </summary>
+        </member>
+        <member name="M:Tundra.Interfaces.Platform.INavigationService.GoBack">
+            <summary>
+            Go back to the previous page.
+            Used for Windows Phone and Windows 8.
+            </summary>
+        </member>
+        <member name="M:Tundra.Interfaces.Platform.INavigationService.NavigateTo(System.Uri)">
+            <summary>
+            Navigate to a specific page.
+            Used for Windows phone.
+            </summary>
+            <param name="page">The absolute URI to the page to navigate to.</param>
+        </member>
+        <member name="M:Tundra.Interfaces.Platform.INavigationService.NavigateTo(System.Type)">
+            <summary>
+            Used for Windows 8.
+            </summary>
+            <param name="pageToNavigateTo">The page to navigate to.</param>
+        </member>
+        <member name="T:Tundra.Interfaces.Platform.INavigator">
+            <summary>
+            Interface for navigation in an application.
+            </summary>
+        </member>
+        <member name="M:Tundra.Interfaces.Platform.INavigator.GoBack">
+            <summary>
+            Goes back to the previous page.
+            </summary>
+        </member>
+        <member name="M:Tundra.Interfaces.Platform.INavigator.NavigateToViewModel``1(System.Object)">
+            <summary>
+            Navigates to the page for a given view model.
+            </summary>
+            <typeparam name="TViewModel">The type of view model to navigate to.</typeparam>
+            <param name="parameter">An optional navigation parameter.</param>
+        </member>
+        <member name="M:Tundra.Interfaces.Platform.INavigator.NavigateToViewModel(System.Type,System.Object)">
+            <summary>
+            Navigates to the page for a given view model.
+            </summary>
+            <param name="viewModelType">Type of the view model to navigate to.</param>
+            <param name="parameter">An optional navigation parameter.</param>
+        </member>
+        <member name="P:Tundra.Interfaces.Platform.INavigator.Container">
+            <summary>
+            Gets the container.
+            </summary>
+            <value>
+            The container.
+            </value>
+        </member>
+        <member name="P:Tundra.Interfaces.Platform.INavigator.CanGoBack">
+            <summary>
+            Gets whether there is a previous page to go back to.
+            </summary>
+        </member>
+        <member name="T:Tundra.Interfaces.Platform.ISettings">
+            <summary>
+            This is our settings service. To save and load settings.
+            </summary>
+        </member>
+        <member name="M:Tundra.Interfaces.Platform.ISettings.AddOrUpdate(System.String,System.Object)">
+            <summary>
+            Adds or updates setting data.
+            </summary>
+            <param name="key">The key for the data.</param>
+            <param name="value">The data.</param>
+        </member>
+        <member name="M:Tundra.Interfaces.Platform.ISettings.TryGetValue``1(System.String,``0@)">
+            <summary>
+            Tries to get setting data.
+            </summary>
+            <typeparam name="T">The type of the result.</typeparam>
+            <param name="key">The key for the data.</param>
+            <param name="value">The output data value.</param>
+            <returns>Returns true if the key existed and the value was assigned to value.</returns>
+        </member>
+        <member name="M:Tundra.Interfaces.Platform.ISettings.Remove(System.String)">
+            <summary>
+            Removes setting data.
+            </summary>
+            <param name="key">The key for the data.</param>
+            <returns>Returns true if the data value existed and was removed and false if it did not exist.</returns>
+        </member>
+        <member name="M:Tundra.Interfaces.Platform.ISettings.ContainsKey(System.String)">
+            <summary>
+            Checks whether there is a setting for the given key.
+            </summary>
+            <param name="key">The key to check for.</param>
+            <returns>Returns true if there is a setting for the given key and false if not.</returns>
+        </member>
+        <member name="T:Tundra.Interfaces.Platform.IStorage">
+            <summary>
+            Interface for saving data to local storage.
+            </summary>
+        </member>
+        <member name="M:Tundra.Interfaces.Platform.IStorage.LoadAsync``1(System.String)">
+            <summary>
+            Loads data from local storage with the given file name.
+            </summary>
+            <typeparam name="T">The type of data to load.</typeparam>
+            <param name="fileName">The name of the file to load data from.</param>
+            <returns>Returns the loaded data or null if the file was not found.</returns>
+        </member>
+        <member name="M:Tundra.Interfaces.Platform.IStorage.SaveAsync(System.String,System.Object)">
+            <summary>
+            Saves data to local storage with the given file name.
+            </summary>
+            <param name="fileName">Name of the file.</param>
+            <param name="data">The data to save.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Tundra.Interfaces.Presenter.IPresenterBase`2">
+            <summary>
+            Presenter Base Interface Declaration
+            </summary>
+            <typeparam name="TView">The type of the view.</typeparam>
+            <typeparam name="TProcessor">The type of the processor.</typeparam>
+        </member>
+        <member name="P:Tundra.Interfaces.Presenter.IPresenterBase`2.Processor">
+            <summary>
+            Gets the processor.
+            </summary>
+            <value>
+            The processor.
+            </value>
+        </member>
+        <member name="P:Tundra.Interfaces.Presenter.IPresenterBase`2.View">
+            <summary>
+            Gets or sets the view.
+            </summary>
+            <value>
+            The view.
+            </value>
+        </member>
+        <member name="T:Tundra.Interfaces.ViewModel.IViewModelLocator">
+            <summary>
+            The base for our ViewModel locator.
+            </summary>
+        </member>
+        <member name="P:Tundra.Interfaces.ViewModel.IViewModelLocator.Item(System.String)">
+            <summary>
+            Gets the specified view model instance.
+            </summary>
+            <value>
+            The specified view model instance..
+            </value>
+            <param name="viewModelName">Name of the view model.</param>
+            <returns></returns>
+        </member>
+        <member name="P:Tundra.Interfaces.ViewModel.IViewModelLocator.ViewModels">
+            <summary>
+            Gets or sets the view models.
+            </summary>
+            <value>
+            The view models.
+            </value>
+        </member>
+        <member name="T:Tundra.Interfaces.ViewModel.IViewModelTypeLocator">
+            <summary>
+            View Model Type Locator Interface
+            </summary>
+        </member>
+        <member name="P:Tundra.Interfaces.ViewModel.IViewModelTypeLocator.Item(System.String)">
+            <summary>
+            Gets the specified view model instance.
+            </summary>
+            <value>
+            The view model instance.
+            </value>
+            <param name="viewModelName">Name of the view model.</param>
+            <returns>
+            the <see cref="T:System.Type"/> associated with the view model name
+            </returns>
+        </member>
+        <member name="P:Tundra.Interfaces.ViewModel.IViewModelTypeLocator.ViewModels">
+            <summary>
+            Gets or sets the view models.
+            </summary>
+            <value>
+            The view models.
+            </value>
+        </member>
+        <member name="T:Tundra.Interfaces.View.IResizable">
+            <summary>
+            Resizable View Interface
+            </summary>
+        </member>
+        <member name="P:Tundra.Interfaces.View.IResizable.Width">
+            <summary>
+            Gets or sets the width.
+            </summary>
+            <value>
+            The width.
+            </value>
+        </member>
+        <member name="P:Tundra.Interfaces.View.IResizable.Height">
+            <summary>
+            Gets or sets the height.
+            </summary>
+            <value>
+            The height.
+            </value>
+        </member>
+        <member name="T:Tundra.Interfaces.View.IView">
+            <summary>
+            View Interface Declaration
+            </summary>
+        </member>
+        <member name="E:Tundra.Interfaces.View.IView.RetrieveDataEventHandler">
+            <summary>
+            Occurs when the data retrieval has been completed.
+            </summary>
+        </member>
+        <member name="P:Tundra.Interfaces.View.IView.UserInformation">
+            <summary>
+            Sets the user information.
+            </summary>
+            <value>
+            The user information.
+            </value>
+        </member>
+        <member name="T:Tundra.Interfaces.Web.IHttpClientDataProvider">
+            <summary>
+            Http Client Data Provider Interface
+            </summary>
+        </member>
+        <member name="M:Tundra.Interfaces.Web.IHttpClientDataProvider.DownloadFileAsync(System.String,System.IProgress{System.Double},System.Threading.CancellationToken)">
+            <summary>
+            Downloads a file asynchronous from a given requestUri path and reports progress.
+            </summary>
+            <param name="requestUri">The request URI.</param>
+            <param name="progress">The progress.</param>
+            <param name="token">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <returns>
+            returns a collection that contains bytes.
+            </returns>
+        </member>
+        <member name="M:Tundra.Interfaces.Web.IHttpClientDataProvider.SendAsync``1(System.String,System.Net.Http.HttpMethod,Tundra.Enum.SerializerFormat,System.Nullable{System.Threading.CancellationToken})">
+            <summary>
+            Sends an HTTP request as an asynchronous operation.
+            </summary>
+            <typeparam name="TResult">The type of the result.</typeparam>
+            <param name="requestUri">The request URI.</param>
+            <param name="method">The HTTP method.</param>
+            <param name="outputFormat">The output format.</param>
+            <param name="token">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tundra.Interfaces.Web.IHttpClientDataProvider.SendAsync``1(System.String,System.Net.Http.HttpMethod,Tundra.Enum.SerializerFormat,System.Collections.Generic.IDictionary{System.String,System.String},System.Nullable{System.Threading.CancellationToken})">
+            <summary>
+            Sends an HTTP request as an asynchronous operation.
+            </summary>
+            <typeparam name="TResult">The type of the result.</typeparam>
+            <param name="requestUri">The request URI.</param>
+            <param name="method">The HTTP method.</param>
+            <param name="outputFormat">The output format.</param>
+            <param name="requestHeaders">The request headers.</param>
+            <param name="token">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tundra.Interfaces.Web.IHttpClientDataProvider.SendAsync``2(System.String,System.Net.Http.HttpMethod,``0,Tundra.Enum.HttpContentType,Tundra.Enum.SerializerFormat,System.Nullable{System.Threading.CancellationToken})">
+            <summary>
+            Sends an HTTP request as an asynchronous operation.
+            </summary>
+            <typeparam name="TInput">The type of the input.</typeparam>
+            <typeparam name="TResult">The type of the result.</typeparam>
+            <param name="requestUri">The request URI.</param>
+            <param name="method">The HTTP method.</param>
+            <param name="inputObject">The input object.</param>
+            <param name="contentType">Type of the content.</param>
+            <param name="serializerFormat">The serializer format.</param>
+            <param name="token">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tundra.Interfaces.Web.IHttpClientDataProvider.SendAsync``2(System.String,System.Net.Http.HttpMethod,``0,Tundra.Enum.HttpContentType,Tundra.Enum.SerializerFormat,System.Collections.Generic.IDictionary{System.String,System.String},System.Nullable{System.Threading.CancellationToken})">
+            <summary>
+            Sends an HTTP request as an asynchronous operation.
+            </summary>
+            <typeparam name="TInput">The type of the input.</typeparam>
+            <typeparam name="TResult">The type of the result.</typeparam>
+            <param name="requestUri">The request URI.</param>
+            <param name="method">The HTTP method.</param>
+            <param name="inputObject">The input object.</param>
+            <param name="contentType">Type of the content.</param>
+            <param name="serializerFormat">The serializer format.</param>
+            <param name="requestHeaders">The request headers.</param>
+            <param name="token">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tundra.Interfaces.Web.IHttpClientDataProvider.SendAsync(System.String,System.Net.Http.HttpMethod,System.Nullable{System.Threading.CancellationToken})">
+            <summary>
+            Sends an HTTP request as an asynchronous operation.
+            </summary>
+            <param name="requestUri">The request URI.</param>
+            <param name="method">The HTTP method.</param>
+            <param name="token">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <returns>
+            The task object representing the asynchronous operation.
+            </returns>
+        </member>
+        <member name="M:Tundra.Interfaces.Web.IHttpClientDataProvider.SendAsync(System.String,System.Net.Http.HttpMethod,System.Collections.Generic.IDictionary{System.String,System.String},System.Nullable{System.Threading.CancellationToken})">
+            <summary>
+            Sends an HTTP request as an asynchronous operation.
+            </summary>
+            <param name="requestUri">The request URI.</param>
+            <param name="method">The HTTP method.</param>
+            <param name="requestHeaders">The request headers.</param>
+            <param name="token">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <returns>
+            The task object representing the asynchronous operation.
+            </returns>
+        </member>
+        <member name="M:Tundra.Interfaces.Web.IHttpClientDataProvider.SendAsync``1(System.String,System.Net.Http.HttpMethod,``0,Tundra.Enum.HttpContentType,Tundra.Enum.SerializerFormat,System.Nullable{System.Threading.CancellationToken})">
+            <summary>
+            Sends an HTTP request as an asynchronous operation.
+            </summary>
+            <typeparam name="TInput">The type of the input.</typeparam>
+            <param name="requestUri">The request URI.</param>
+            <param name="method">The HTTP method.</param>
+            <param name="inputObject">The input object.</param>
+            <param name="contentType">Type of the content.</param>
+            <param name="serializerFormat">The serializer format.</param>
+            <param name="token">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <returns>
+            The task object representing the asynchronous operation.
+            </returns>
+        </member>
+        <member name="M:Tundra.Interfaces.Web.IHttpClientDataProvider.SendAsync``1(System.String,System.Net.Http.HttpMethod,``0,Tundra.Enum.HttpContentType,Tundra.Enum.SerializerFormat,System.Collections.Generic.IDictionary{System.String,System.String},System.Nullable{System.Threading.CancellationToken})">
+            <summary>
+            Sends an HTTP request as an asynchronous operation.
+            </summary>
+            <typeparam name="TInput">The type of the input.</typeparam>
+            <param name="requestUri">The request URI.</param>
+            <param name="method">The HTTP method.</param>
+            <param name="inputObject">The input object.</param>
+            <param name="contentType">Type of the content.</param>
+            <param name="serializerFormat">The serializer format.</param>
+            <param name="requestHeaders">The request headers.</param>
+            <param name="token">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <returns>
+            The task object representing the asynchronous operation.
+            </returns>
+        </member>
+        <member name="P:Tundra.Interfaces.Web.IHttpClientDataProvider.BaseAddress">
+            <summary>
+            Gets or sets the base address of Uniform Resource Identifier (URI) of the Internet resource used when sending requests.
+            </summary>
+            <value>
+            The base address.
+            </value>
+        </member>
+        <member name="T:Tundra.MVP.Presenter.PresenterBase`2">
+            <summary>
+            Presenter base class declaration
+            </summary>
+            <typeparam name="TView">The type of the view.</typeparam>
+            <typeparam name="TProcessor">The type of the processor.</typeparam>
+            <example>
+            The following example demonstrates how to implement the <see cref="T:Tundra.MVP.Presenter.PresenterBase`2"/>.
+            <code>
+            public class PersonData
+            {
+                public string time { get; set; }
+                public long milliseconds_since_epoch { get; set; }
+                public string date { get; set; }
+            }
+            
+            public interface IPersonView : IView
+            {
+                PersonData PersonDataProperty { get; set; }
+            }
+            
+            public class PersonView : ViewBase, IPersonView
+            {
+                private read-only PersonPresenter _presenter;
+                private PersonData _personData = new PersonData();        
+            
+                public PersonData PersonDataProperty
+                {
+                    get
+                    {
+                        return this._personData;
+                    }
+                    set
+                    {
+                        this._personData = value;
+                        // bind to UI controls here
+                    }
+                }
+            
+                public PersonView()
+                {
+                    // create a new instance of the person presenter
+                    this._presenter = new PersonPresenter(this, new HttpClientWrapper());
+                    // this event will fire in the presenter, because of the HookupViewEvents method
+                    base.OnDataRetrieved(new EventArgs());
+                }
+            
+                protected override void OnUserInformationChanged(string userInformation)
+                {
+                    // bind to UI controls here to show the user information
+                    Trace.TraceInformation("UserInformation: {0}", userInformation);
+                }
+            
+                protected override void Dispose(bool disposing)
+                {            
+                    if (disposing)
+                    {
+                        // free managed resources
+                        this._presenter.Dispose();
+                        Trace.TraceInformation("Dispose was called on Presenter");
+                    }
+                    // free native resources if there are any.
+                }
+            }
+            
+            public class PersonPresenter : PresenterBase&lt;IPersonView, IHttpClientDataProvider&gt;
+            {
+                public PersonPresenter(IPersonView personView, IHttpClientDataProvider dataProvider)
+                    : base(personView, dataProvider)
+                {
+                    this.HookupViewEvents(personView);
+                }
+            
+                private void ViewOnRetrievePersonDataHandler(object sender, EventArgs eventArgs)
+                {
+                    this.View.UserInformation = "Loading person data...";
+                    Response&lt;PersonData&gt; personData = base.Processor.InvokeGetAsync&lt;PersonData&gt;("http://date.jsontest.com").Result;
+                    if (personData.IsSuccess &amp;&amp; personData.Data != null)
+                    {
+                        // this will update the property in the view and 
+                        // result in updating the UI
+                        this.View.PersonDataProperty = personData.Data;
+                        Trace.TraceInformation("Retrieved data from Processor");
+                    }
+                    this.View.UserInformation = "Loading completed...";
+                }
+            
+                protected override sealed void HookupViewEvents(IPersonView view)
+                {            
+                    view.RetrieveDataEventHandler += ViewOnRetrievePersonDataHandler;
+                    Trace.TraceInformation("HookupViewEvents was called");
+                }
+            
+                protected override void UnhookViewEvents(IPersonView view)
+                {
+                    view.RetrieveDataEventHandler -= ViewOnRetrievePersonDataHandler;
+                    Trace.TraceInformation("UnhookViewEvents was called");
+                }
+            }
+            </code>
+            </example>
+        </member>
+        <member name="M:Tundra.MVP.Presenter.PresenterBase`2.#ctor(`0,`1)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Tundra.MVP.Presenter.PresenterBase`2"/> class.
+            </summary>
+            <param name="view">The view.</param>
+            <param name="processor">The processor.</param>
+        </member>
+        <member name="M:Tundra.MVP.Presenter.PresenterBase`2.DisposeView(`0)">
+            <summary>
+            Disposes the view.
+            </summary>
+            <param name="view">The view.</param>
+        </member>
+        <member name="M:Tundra.MVP.Presenter.PresenterBase`2.RefreshView(`0)">
+            <summary>
+            Refreshes the view.
+            </summary>
+            <param name="view">The view.</param>
+        </member>
+        <member name="M:Tundra.MVP.Presenter.PresenterBase`2.HookupViewEvents(`0)">
+            <summary>
+            Hook-ups the view events.
+            </summary>
+            <param name="view">The view.</param>
+        </member>
+        <member name="M:Tundra.MVP.Presenter.PresenterBase`2.UnhookViewEvents(`0)">
+            <summary>
+            Unhook the events within the view.
+            </summary>
+            <param name="view">The view.</param>
+        </member>
+        <member name="M:Tundra.MVP.Presenter.PresenterBase`2.Finalize">
+            <summary>
+            Releases unmanaged resources and performs other cleanup operations before the
+            <see cref="T:Tundra.MVP.Presenter.PresenterBase`2"/> is reclaimed by garbage collection.
+            </summary>
+        </member>
+        <member name="M:Tundra.MVP.Presenter.PresenterBase`2.Dispose">
+            <summary>
+            Releases unmanaged and - optionally - managed resources
+            </summary>
+        </member>
+        <member name="M:Tundra.MVP.Presenter.PresenterBase`2.Dispose(System.Boolean)">
+            <summary>
+            Releases unmanaged and - optionally - managed resources
+            </summary>
+            <param name="disposing"><c>true</c> to release both managed and unmanaged resources; <c>false</c> to release only unmanaged resources.</param>
+        </member>
+        <member name="P:Tundra.MVP.Presenter.PresenterBase`2.Processor">
+            <summary>
+            Gets the processor.
+            </summary>
+            <value>
+            The processor.
+            </value>
+        </member>
+        <member name="P:Tundra.MVP.Presenter.PresenterBase`2.View">
+            <summary>
+            Gets or sets the view.
+            </summary>
+            <value>
+            The view.
+            </value>
+        </member>
+        <member name="T:Tundra.MVVM.ViewModel.BaseViewModel`1">
+            <summary>
+            Our base-view model based on the ViewModelBase of MVVM-Light portable, with
+            a generic Model.
+            </summary>
+            <typeparam name="TModel">Type of our current model-class we want to use</typeparam>
+        </member>
+        <member name="T:Tundra.MVVM.ViewModel.TundraBaseViewModel">
+            <summary>
+            A simple base class for the ViewModel classes in the MVVM pattern.
+            </summary>
+        </member>
+        <member name="F:Tundra.MVVM.ViewModel.TundraBaseViewModel._activeUserSession">
+            <summary>
+            The active user session
+            </summary>
+        </member>
+        <member name="F:Tundra.MVVM.ViewModel.TundraBaseViewModel._busyInformation">
+            <summary>
+            The busy information
+            </summary>
+        </member>
+        <member name="F:Tundra.MVVM.ViewModel.TundraBaseViewModel._errorOccurred">
+            <summary>
+            The error occurred
+            </summary>
+        </member>
+        <member name="F:Tundra.MVVM.ViewModel.TundraBaseViewModel._isBusy">
+            <summary>
+            The busy indicator
+            </summary>
+        </member>
+        <member name="F:Tundra.MVVM.ViewModel.TundraBaseViewModel._tokenSource">
+            <summary>
+            The token source
+            </summary>
+        </member>
+        <member name="F:Tundra.MVVM.ViewModel.TundraBaseViewModel._userMessage">
+            <summary>
+            The user message
+            </summary>
+        </member>
+        <member name="M:Tundra.MVVM.ViewModel.TundraBaseViewModel.#ctor">
+            <summary>
+            Prevents a default instance of the <see cref="T:Tundra.MVVM.ViewModel.TundraBaseViewModel"/> class from being created.
+            </summary>
+        </member>
+        <member name="M:Tundra.MVVM.ViewModel.TundraBaseViewModel.#ctor(Tundra.Interfaces.Data.IDataAccess)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Tundra.MVVM.ViewModel.TundraBaseViewModel"/> class.
+            </summary>
+            <param name="dataAccessProvider">The data access provider.</param>
+        </member>
+        <member name="M:Tundra.MVVM.ViewModel.TundraBaseViewModel.ExecuteCanGoBack">
+            <summary>
+            Determines whether the go back command is allowed to execute.
+            </summary>
+            <returns>
+              <c>true</c> if the command can execute; otherwise <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:Tundra.MVVM.ViewModel.TundraBaseViewModel.ExecuteGoBack">
+            <summary>
+            Executes the go back command.
+            </summary>
+        </member>
+        <member name="M:Tundra.MVVM.ViewModel.TundraBaseViewModel.ExecuteCancelCommand">
+            <summary>
+            Executes the cancel command.
+            </summary>
+        </member>
+        <member name="M:Tundra.MVVM.ViewModel.TundraBaseViewModel.LoadState(System.Object,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            Loads state when the view model is loaded.
+            </summary>
+            <param name="navigationParameter">The navigation parameter.</param>
+            <param name="pageState">The state to load.</param>
+        </member>
+        <member name="M:Tundra.MVVM.ViewModel.TundraBaseViewModel.SaveState(System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            Saves state when the view model is unloaded.
+            </summary>
+            <param name="pageState">The state to save to.</param>
+        </member>
+        <member name="M:Tundra.MVVM.ViewModel.TundraBaseViewModel.OnInitialized">
+            <summary>
+            Called when this instance has been initialized.
+            </summary>
+        </member>
+        <member name="M:Tundra.MVVM.ViewModel.TundraBaseViewModel.DeserializeJsonAsync``1(System.String)">
+            <summary>
+            Deserializes the json asynchronous.
+            </summary>
+            <typeparam name="T">The expected type of the value which will be deserialized.</typeparam>
+            <param name="value">The value.</param>
+            <returns>
+            an instance of <see cref="!:T"/>.
+            </returns>
+        </member>
+        <member name="M:Tundra.MVVM.ViewModel.TundraBaseViewModel.SerializeJsonAsync``1(``0)">
+            <summary>
+            Serializes the json asynchronous.
+            </summary>
+            <typeparam name="T">The type of the value which will be serialized.</typeparam>
+            <param name="value">The value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tundra.MVVM.ViewModel.TundraBaseViewModel.Finalize">
+            <summary>
+            Finalizes an instance of the <see cref="T:Tundra.MVVM.ViewModel.TundraBaseViewModel"/> class.
+            </summary>
+        </member>
+        <member name="M:Tundra.MVVM.ViewModel.TundraBaseViewModel.Dispose">
+            <summary>
+            Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            </summary>
+        </member>
+        <member name="M:Tundra.MVVM.ViewModel.TundraBaseViewModel.Dispose(System.Boolean)">
+            <summary>
+            Releases unmanaged and - optionally - managed resources.
+            </summary>
+            <param name="disposing"><c>true</c> to release both managed and unmanaged resources; <c>false</c> to release only unmanaged resources.</param>
+        </member>
+        <member name="P:Tundra.MVVM.ViewModel.TundraBaseViewModel.ActiveUserSession">
+            <summary>
+            Gets or sets a value indicating whether an active user session is running.
+            </summary>
+            <value>
+              <c>true</c> if an active user session is running; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Tundra.MVVM.ViewModel.TundraBaseViewModel.BusyInformation">
+            <summary>
+            Gets or sets the busy information.
+            </summary>
+            <value>
+            The busy information.
+            </value>
+        </member>
+        <member name="P:Tundra.MVVM.ViewModel.TundraBaseViewModel.BusyInformationChanged">
+            <summary>
+            Gets or sets the busy information changed.
+            </summary>
+            <value>
+            The busy information changed.
+            </value>
+        </member>
+        <member name="P:Tundra.MVVM.ViewModel.TundraBaseViewModel.DataStore">
+            <summary>
+            Gets or sets the data store.
+            </summary>
+            <value>
+            The data store.
+            </value>
+        </member>
+        <member name="P:Tundra.MVVM.ViewModel.TundraBaseViewModel.ErrorOccurred">
+            <summary>
+            Gets or sets a value indicating whether an error has occurred.
+            </summary>
+            <value>
+              <c>true</c> if an error occurred; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Tundra.MVVM.ViewModel.TundraBaseViewModel.IsBusy">
+            <summary>
+            Gets or sets whether the view model is busy.
+            </summary>
+            <value>
+              <c>true</c> if the view model is busy; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Tundra.MVVM.ViewModel.TundraBaseViewModel.IsBusyChanged">
+            <summary>
+            Gets or sets the is busy changed.
+            </summary>
+            <value>
+            The is busy changed.
+            </value>
+        </member>
+        <member name="P:Tundra.MVVM.ViewModel.TundraBaseViewModel.Token">
+            <summary>
+            Gets or sets the token.
+            </summary>
+            <value>
+            The token.
+            </value>
+        </member>
+        <member name="P:Tundra.MVVM.ViewModel.TundraBaseViewModel.TokenSource">
+            <summary>
+            Gets or sets the token source.
+            </summary>
+            <value>
+            The token source.
+            </value>
+        </member>
+        <member name="P:Tundra.MVVM.ViewModel.TundraBaseViewModel.UserMessage">
+            <summary>
+            Gets or sets the user message.
+            </summary>
+            <value>
+            The user message.
+            </value>
+        </member>
+        <member name="P:Tundra.MVVM.ViewModel.TundraBaseViewModel.NavigationService">
+            <summary>
+            Gets the navigation service.
+            </summary>
+            <value>
+            The navigation service.
+            </value>
+        </member>
+        <member name="P:Tundra.MVVM.ViewModel.TundraBaseViewModel.CancelToken">
+            <summary>
+            Gets the cancel token.
+            </summary>
+            <value>
+            The cancel token.
+            </value>
+        </member>
+        <member name="P:Tundra.MVVM.ViewModel.TundraBaseViewModel.GoBack">
+            <summary>
+            Gets or sets the go back.
+            </summary>
+            <value>
+            The go back.
+            </value>
+        </member>
+        <member name="F:Tundra.MVVM.ViewModel.BaseViewModel`1._navigationService">
+            <summary>
+            Our navigation service we need.
+            </summary>
+        </member>
+        <member name="M:Tundra.MVVM.ViewModel.BaseViewModel`1.#ctor(`0)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Tundra.MVVM.ViewModel.BaseViewModel`1"/> class.
+            </summary>
+            <param name="model">The model.</param>
+            <exception cref="T:System.ArgumentNullException">model</exception>
+        </member>
+        <member name="M:Tundra.MVVM.ViewModel.BaseViewModel`1.#ctor(`0,Tundra.Interfaces.Platform.INavigator)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Tundra.MVVM.ViewModel.BaseViewModel`1"/> class.
+            </summary>
+            <param name="model">The model.</param>
+            <param name="navigationService">The navigation service.</param>
+            <exception cref="T:System.ArgumentNullException">model
+            or
+            navigationService</exception>
+        </member>
+        <member name="P:Tundra.MVVM.ViewModel.BaseViewModel`1.Model">
+            <summary>
+            Gets the model.
+            </summary>
+            <value>
+            The model.
+            </value>
+        </member>
+        <member name="P:Tundra.MVVM.ViewModel.BaseViewModel`1.NavigationService">
+            <summary>
+            Our navigation service we need.
+            </summary>
+            <value>
+            The navigation service.
+            </value>
+        </member>
+        <member name="T:Tundra.MVVM.ViewModelLocator">
+            <summary>
+            The ViewModel locator.
+            </summary>
+        </member>
+        <member name="M:Tundra.MVVM.ViewModelLocator.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Tundra.MVVM.ViewModelLocator"/> class.
+            </summary>
+        </member>
+        <member name="P:Tundra.MVVM.ViewModelLocator.Item(System.String)">
+            <summary>
+            Set and get your ViewModels here.
+            </summary>
+            <param name="viewModelName">The name of the view model to get or set.</param>
+            <returns>The view model selected.</returns>
+        </member>
+        <member name="P:Tundra.MVVM.ViewModelLocator.ViewModels">
+            <summary>
+            Gets or sets the view models.
+            </summary>
+            <value>
+            The view models.
+            </value>
+        </member>
+        <member name="T:Tundra.MVP.View.ViewBase">
+            <summary>
+            View Base Class. This calls implements the <see cref="T:Tundra.Interfaces.View.IView"/> interface as well as <see cref="T:System.IDisposable"/>
+            </summary>
+        </member>
+        <member name="F:Tundra.MVP.View.ViewBase._userInformation">
+            <summary>
+            Stores the user information
+            </summary>
+        </member>
+        <member name="M:Tundra.MVP.View.ViewBase.OnDataRetrieved(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:Tundra.MVP.View.ViewBase.RetrieveDataEventHandler"/> event.
+            </summary>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+            <remarks>
+            The event-invoking method that derived classes can override.
+            </remarks>
+        </member>
+        <member name="M:Tundra.MVP.View.ViewBase.OnUserInformationChanged(System.String)">
+            <summary>
+            Called when the user information has changed.
+            </summary>
+            <param name="userInformation">The user information.</param>
+        </member>
+        <member name="M:Tundra.MVP.View.ViewBase.Finalize">
+            <summary>
+            Releases unmanaged resources and performs other cleanup operations before the
+            <see cref="T:Tundra.MVP.View.ViewBase"/> is reclaimed by garbage collection.
+            </summary>
+        </member>
+        <member name="M:Tundra.MVP.View.ViewBase.Dispose">
+            <summary>
+            Releases unmanaged and - optionally - managed resources
+            </summary>
+        </member>
+        <member name="M:Tundra.MVP.View.ViewBase.Dispose(System.Boolean)">
+            <summary>
+            Releases unmanaged and - optionally - managed resources
+            </summary>
+            <param name="disposing"><c>true</c> to release both managed and unmanaged resources; <c>false</c> to release only unmanaged resources.</param>
+        </member>
+        <member name="E:Tundra.MVP.View.ViewBase.RetrieveDataEventHandler">
+            <summary>
+            Occurs when the data retrieval has been completed.
+            </summary>
+        </member>
+        <member name="P:Tundra.MVP.View.ViewBase.UserInformation">
+            <summary>
+            Sets the user information.
+            </summary>
+            <value>
+            The user information.
+            </value>
+        </member>
+        <member name="T:Tundra.Net.HttpClientWrapper">
+            <summary>
+            Http Client Wrapper Class
+            </summary>
+        </member>
+        <member name="F:Tundra.Net.HttpClientWrapper._container">
+            <summary>
+            The cookie container
+            </summary>
+        </member>
+        <member name="F:Tundra.Net.HttpClientWrapper._httpClient">
+            <summary>
+            The HTTP client instance
+            </summary>
+        </member>
+        <member name="M:Tundra.Net.HttpClientWrapper.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Tundra.Net.HttpClientWrapper"/> class.
+            </summary>
+        </member>
+        <member name="M:Tundra.Net.HttpClientWrapper.#ctor(System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Tundra.Net.HttpClientWrapper"/> class.
+            </summary>
+            <param name="enableCaching">if set to <c>true</c> caching will be enabled; otherwise the default value will be used: <c>false</c>.</param>
+        </member>
+        <member name="M:Tundra.Net.HttpClientWrapper.#ctor(Tundra.Interfaces.Credentials.INetCredential,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Tundra.Net.HttpClientWrapper"/> class.
+            </summary>
+            <param name="credential">The credential used to connect with the HTTPClient.</param>
+            <param name="enableCaching">if set to <c>true</c> caching will be enabled; otherwise the default value will be used: <c>false</c>.</param>
+        </member>
+        <member name="M:Tundra.Net.HttpClientWrapper.SetHeader(System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            Sets the headers on the http client.
+            </summary>
+            <param name="headersDictionary">The headers dictionary.</param>
+            <exception cref="T:System.ArgumentNullException">headersDictionary</exception>
+        </member>
+        <member name="M:Tundra.Net.HttpClientWrapper.DownloadFileAsync(System.String,System.IProgress{System.Double},System.Threading.CancellationToken)">
+            <summary>
+            Downloads a file asynchronous from a given requestUri path and reports progress.
+            </summary>
+            <param name="requestUri">The request URI.</param>
+            <param name="progress">The progress.</param>
+            <param name="token">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <returns>
+            returns a collection that contains bytes.
+            </returns>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:Tundra.Net.HttpClientWrapper.SendAsync``1(System.String,System.Net.Http.HttpMethod,Tundra.Enum.SerializerFormat,System.Nullable{System.Threading.CancellationToken})">
+            <summary>
+            Sends an HTTP request as an asynchronous operation.
+            </summary>
+            <typeparam name="TResult">The type of the result.</typeparam>
+            <param name="requestUri">The request URI.</param>
+            <param name="method">The HTTP method.</param>
+            <param name="outputFormat">The output format.</param>
+            <param name="token">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tundra.Net.HttpClientWrapper.SendAsync``1(System.String,System.Net.Http.HttpMethod,Tundra.Enum.SerializerFormat,System.Collections.Generic.IDictionary{System.String,System.String},System.Nullable{System.Threading.CancellationToken})">
+            <summary>
+            Sends an HTTP request as an asynchronous operation.
+            </summary>
+            <typeparam name="TResult">The type of the result.</typeparam>
+            <param name="requestUri">The request URI.</param>
+            <param name="method">The HTTP method.</param>
+            <param name="outputFormat">The output format.</param>
+            <param name="requestHeaders">The request headers.</param>
+            <param name="token">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tundra.Net.HttpClientWrapper.SendAsync``2(System.String,System.Net.Http.HttpMethod,``0,Tundra.Enum.HttpContentType,Tundra.Enum.SerializerFormat,System.Nullable{System.Threading.CancellationToken})">
+            <summary>
+            Sends an HTTP request as an asynchronous operation.
+            </summary>
+            <typeparam name="TInput">The type of the input.</typeparam>
+            <typeparam name="TResult">The type of the result.</typeparam>
+            <param name="requestUri">The request URI.</param>
+            <param name="method">The HTTP method.</param>
+            <param name="inputObject">The input object.</param>
+            <param name="contentType">Type of the content.</param>
+            <param name="serializerFormat">The serializer format.</param>
+            <param name="token">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tundra.Net.HttpClientWrapper.SendAsync``2(System.String,System.Net.Http.HttpMethod,``0,Tundra.Enum.HttpContentType,Tundra.Enum.SerializerFormat,System.Collections.Generic.IDictionary{System.String,System.String},System.Nullable{System.Threading.CancellationToken})">
+            <summary>
+            Sends an HTTP request as an asynchronous operation.
+            </summary>
+            <typeparam name="TInput">The type of the input.</typeparam>
+            <typeparam name="TResult">The type of the result.</typeparam>
+            <param name="requestUri">The request URI.</param>
+            <param name="method">The HTTP method.</param>
+            <param name="inputObject">The input object.</param>
+            <param name="contentType">Type of the content.</param>
+            <param name="serializerFormat">The serializer format.</param>
+            <param name="requestHeaders">The request headers.</param>
+            <param name="token">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Tundra.Net.HttpClientWrapper.SendAsync(System.String,System.Net.Http.HttpMethod,System.Nullable{System.Threading.CancellationToken})">
+            <summary>
+            Sends an HTTP request as an asynchronous operation.
+            </summary>
+            <param name="requestUri">The request URI.</param>
+            <param name="method">The HTTP method.</param>
+            <param name="token">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <returns>
+            The task object representing the asynchronous operation.
+            </returns>
+        </member>
+        <member name="M:Tundra.Net.HttpClientWrapper.SendAsync(System.String,System.Net.Http.HttpMethod,System.Collections.Generic.IDictionary{System.String,System.String},System.Nullable{System.Threading.CancellationToken})">
+            <summary>
+            Sends an HTTP request as an asynchronous operation.
+            </summary>
+            <param name="requestUri">The request URI.</param>
+            <param name="method">The HTTP method.</param>
+            <param name="requestHeaders">The request headers.</param>
+            <param name="token">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <returns>
+            The task object representing the asynchronous operation.
+            </returns>
+        </member>
+        <member name="M:Tundra.Net.HttpClientWrapper.SendAsync``1(System.String,System.Net.Http.HttpMethod,``0,Tundra.Enum.HttpContentType,Tundra.Enum.SerializerFormat,System.Nullable{System.Threading.CancellationToken})">
+            <summary>
+            Sends an HTTP request as an asynchronous operation.
+            </summary>
+            <typeparam name="TInput">The type of the input.</typeparam>
+            <param name="requestUri">The request URI.</param>
+            <param name="method">The HTTP method.</param>
+            <param name="inputObject">The input object.</param>
+            <param name="contentType">Type of the content.</param>
+            <param name="serializerFormat">The serializer format.</param>
+            <param name="token">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <returns>
+            The task object representing the asynchronous operation.
+            </returns>
+        </member>
+        <member name="M:Tundra.Net.HttpClientWrapper.SendAsync``1(System.String,System.Net.Http.HttpMethod,``0,Tundra.Enum.HttpContentType,Tundra.Enum.SerializerFormat,System.Collections.Generic.IDictionary{System.String,System.String},System.Nullable{System.Threading.CancellationToken})">
+            <summary>
+            Sends an HTTP request as an asynchronous operation.
+            </summary>
+            <typeparam name="TInput">The type of the input.</typeparam>
+            <param name="requestUri">The request URI.</param>
+            <param name="method">The HTTP method.</param>
+            <param name="inputObject">The input object.</param>
+            <param name="contentType">Type of the content.</param>
+            <param name="serializerFormat">The serializer format.</param>
+            <param name="requestHeaders">The request headers.</param>
+            <param name="token">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
+            <returns>
+            The task object representing the asynchronous operation.
+            </returns>
+        </member>
+        <member name="P:Tundra.Net.HttpClientWrapper.BaseAddress">
+            <summary>
+            Gets or sets the base address of Uniform Resource Identifier (URI) of the Internet resource used when sending requests.
+            </summary>
+            <value>
+            The base address.
+            </value>
+        </member>
+        <member name="P:Tundra.Net.HttpClientWrapper.EnableCaching">
+            <summary>
+            Gets or sets a value indicating whether to enable caching.
+            </summary>
+            <value>
+              <c>true</c> if caching should be enabled; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="T:Tundra.Net.Model.Base.HttpClientResponseBase">
+            <summary>
+            Http Client Response Base Class
+            </summary>
+        </member>
+        <member name="P:Tundra.Net.Model.Base.HttpClientResponseBase.Cancellation">
+            <summary>
+            Gets a value indicating whether this instance was caused by a cancellation.
+            </summary>
+            <value>
+              <c>true</c> if cancellation; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Tundra.Net.Model.Base.HttpClientResponseBase.Error">
+            <summary>
+            Gets or sets the error.
+            </summary>
+            <value>
+            The error.
+            </value>
+        </member>
+        <member name="T:Tundra.Net.Model.Credential">
+            <summary>
+            Credential Class
+            </summary>
+        </member>
+        <member name="F:Tundra.Net.Model.Credential._domain">
+            <summary>
+            The domain
+            </summary>
+        </member>
+        <member name="F:Tundra.Net.Model.Credential._password">
+            <summary>
+            The password
+            </summary>
+        </member>
+        <member name="F:Tundra.Net.Model.Credential._userName">
+            <summary>
+            The user name
+            </summary>
+        </member>
+        <member name="M:Tundra.Net.Model.Credential.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Tundra.Net.Model.Credential"/> class.
+            </summary>
+        </member>
+        <member name="M:Tundra.Net.Model.Credential.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Tundra.Net.Model.Credential"/> class.
+            </summary>
+            <param name="userName">Name of the user.</param>
+            <param name="password">The password.</param>
+        </member>
+        <member name="M:Tundra.Net.Model.Credential.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Tundra.Net.Model.Credential"/> class.
+            </summary>
+            <param name="userName">Name of the user.</param>
+            <param name="password">The password.</param>
+            <param name="domain">The domain.</param>
+        </member>
+        <member name="P:Tundra.Net.Model.Credential.Domain">
+            <summary>
+            Gets or sets the domain.
+            </summary>
+            <value>
+            The domain.
+            </value>
+        </member>
+        <member name="P:Tundra.Net.Model.Credential.Password">
+            <summary>
+            Gets or sets the password.
+            </summary>
+            <value>
+            The password.
+            </value>
+        </member>
+        <member name="P:Tundra.Net.Model.Credential.UserName">
+            <summary>
+            Gets or sets the name of the user.
+            </summary>
+            <value>
+            The name of the user.
+            </value>
+        </member>
+        <member name="T:Tundra.Net.Model.Response`1">
+            <summary>
+            Response Base Class
+            </summary>
+            <typeparam name="TData">The type of the data.</typeparam>
+        </member>
+        <member name="P:Tundra.Net.Model.Response`1.IsSuccess">
+            <summary>
+            Gets or sets a value indicating whether the it was a success.
+            </summary>
+            <value>
+              <c>true</c> if successful; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Tundra.Net.Model.Response`1.Message">
+            <summary>
+            Gets or sets the message.
+            </summary>
+            <value>
+            The message.
+            </value>
+        </member>
+        <member name="P:Tundra.Net.Model.Response`1.Data">
+            <summary>
+            Gets or sets the data.
+            </summary>
+            <value>
+            The data.
+            </value>
+        </member>
+        <member name="T:Tundra.Wrapper.XmlSerializerWrapper">
+            <summary>
+            Xml Serializer Wrapper Class
+            </summary>
+        </member>
+        <member name="M:Tundra.Wrapper.XmlSerializerWrapper.Deserialize``1(System.String)">
+            <summary>
+            Deserializes an object.
+            </summary>
+            <typeparam name="T">The type of object to de-serialize.</typeparam>
+            <param name="data">The string data to use for deserialization.</param>
+            <returns>
+            Returns the deserialized object.
+            </returns>
+        </member>
+        <member name="M:Tundra.Wrapper.XmlSerializerWrapper.Serialize``1(``0)">
+            <summary>
+            Serializes an object to a string.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="instance">The object to serialize.</param>
+            <returns>
+            Returns the object serialized as a string.
+            </returns>
+        </member>
+        <member name="T:Tundra.Writers.Utf8StringWriter">
+            <summary>
+            Utf8 String Writer Class
+            </summary>
+        </member>
+        <member name="P:Tundra.Writers.Utf8StringWriter.Encoding">
+            <summary>
+            Gets the <see cref="T:System.Text.Encoding" /> in which the output is written.
+            </summary>
+            <returns>The Encoding in which the output is written.</returns>
+        </member>
+    </members>
+</doc>
