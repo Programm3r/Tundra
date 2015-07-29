@@ -19,11 +19,19 @@ View Model Locators
 Wrapper and Providers
 Tundra relies on the following frameworks:
 
-Lex.Db: Lex.DB is a lightweight, superfast, in-process database engine
-Microsoft.Bcl: Microsoft BCL Portability Pack
-Microsoft.Bcl.Async: This package enables 'async' and 'await' keywords
-Microsoft.Bcl.Build: provides build infrastructure components
-MvvmCross: MVVM bindings - Hot Tuna MvvmCross Libraries
-MvvmLightLibs: MVVM bindings - MVVM Light libraries
-Newtonsoft.Json: son.NET is a popular high-performance JSON framework
-Portable.Ninject: dependency injection framework
+Lex.Db: 
+ -> Lex.DB is a lightweight, superfast, in-process database engine
+Microsoft.Bcl: 
+ -> Microsoft BCL Portability Pack
+Microsoft.Bcl.Async: 
+ -> This package enables 'async' and 'await' keywords
+Microsoft.Bcl.Build: 
+ -> Provides build infrastructure components
+MvvmCross: 
+ -> MVVM bindings - Hot Tuna MvvmCross Libraries
+MvvmLightLibs: 
+ -> MVVM bindings - MVVM Light libraries
+Newtonsoft.Json: 
+ -> Json.NET is a popular high-performance JSON framework
+Portable.Ninject: 
+ -> Dependency injection framework
